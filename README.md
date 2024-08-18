@@ -25,4 +25,5 @@ Jayden Van - Concept Artist/Lead Designer
 
 ### Meeting Minutes
 [04/08/24](https://docs.google.com/document/d/1LMnN8Wt5OSWrmradWRzqk42Pxp1uaJ73-b9HHmiDgsE/edit?usp=sharing)
+
 [18/08/24](https://docs.google.com/document/d/1CyRwixxatyi-iyLiJwiZimrXBRsrB-2mIf8cMn_RL44/edit)
