@@ -27,3 +27,5 @@ Jayden Van - Concept Artist/Lead Designer
 [04/08/24](https://docs.google.com/document/d/1LMnN8Wt5OSWrmradWRzqk42Pxp1uaJ73-b9HHmiDgsE/edit?usp=sharing)
 
 [18/08/24](https://docs.google.com/document/d/1CyRwixxatyi-iyLiJwiZimrXBRsrB-2mIf8cMn_RL44/edit)
+
+[25/08/24](https://docs.google.com/document/d/1x3EFnLSmcmUTVQziu_j0OYT--RUGzmG-Pinp77PUtDg/edit?usp=sharing)
