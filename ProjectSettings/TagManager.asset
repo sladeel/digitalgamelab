@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Screen
+    uniqueID: 266387415
+    locked: 0
+  - name: Interactables
+    uniqueID: 2218890603
+    locked: 0
+  - name: Mouse
+    uniqueID: 4044042323
+    locked: 0
+  - name: World
+    uniqueID: 2051440873
+    locked: 0
