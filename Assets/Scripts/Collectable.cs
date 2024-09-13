@@ -9,6 +9,7 @@ public class Collectable : MonoBehaviour
     public GameObject mouse;
     public Collider2D notebook;
     Vector2 position;
+
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,14 @@ public class Collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((mouse.GetComponent<Collider2D>().IsTouching(text) || ) && Input.GetMouseButton(0))
+        LayerMask mask = LayerMask.GetMask("Collectable");
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1, mask);
+
+        if (hit.collider == text)
+        {
+            Debug.Log("Success! Hit " + hit.collider);
+        }
+        if ((/*mouse.GetComponent<Collider2D>().IsTouching(text) ||*/ (hit.collider == text)) && Input.GetMouseButton(0))
         {
             transform.position = mouse.transform.position;
             if (notebook.IsTouching(text))
@@ -33,7 +41,7 @@ public class Collectable : MonoBehaviour
         {
 
         }
-        
+
 
         if (found == true)
         {
