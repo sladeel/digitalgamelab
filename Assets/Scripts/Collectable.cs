@@ -6,11 +6,13 @@ public class Collectable : MonoBehaviour
 {
     bool found = false;
     Collider2D text;
+    Collider2D notebookCollider;
     public GameObject mouse;
-    private FollowMouse script;
-    public Collider2D notebook;
+    private FollowMouse mouseScript;
+    private Notebook notebookScript;
+    public GameObject notebook;
     Vector2 difference;
-    
+    public string itemName;
 
 
     float maxMoveSpeed;
@@ -22,9 +24,11 @@ public class Collectable : MonoBehaviour
     void Start()
     {
         text = GetComponent<Collider2D>();
-        script = mouse.GetComponent<FollowMouse>();
-        maxMoveSpeed = script.maxMoveSpeed;
-        smoothTime = script.smoothTime;
+        notebookCollider = notebook.GetComponent<Collider2D>();
+        mouseScript = mouse.GetComponent<FollowMouse>();
+        notebookScript = notebook.GetComponent<Notebook>();
+        maxMoveSpeed = mouseScript.maxMoveSpeed;
+        smoothTime = mouseScript.smoothTime;
     }
 
     // Update is called once per frame
@@ -44,16 +48,19 @@ public class Collectable : MonoBehaviour
 
             transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed);
 
-            if (notebook.IsTouching(text))
+            if (notebookCollider.IsTouching(text))
             {
-                //add to notebook array
+                notebookScript.Collect(itemName);
                 found = true;
             }
         }
-        else
+
+        
+
+        /*else
         {
             
-        }
+        }*/
 
 
         if (found == true)
