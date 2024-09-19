@@ -18,6 +18,9 @@ public class Collectable : MonoBehaviour
     float maxMoveSpeed;
     float smoothTime;
     Vector2 currentVelocity;
+    Vector2 startPosition;
+    float screenDifference;
+    Vector2 returnVelocity;
 
 
     // Start is called before the first frame update
@@ -29,6 +32,8 @@ public class Collectable : MonoBehaviour
         notebookScript = notebook.GetComponent<Notebook>();
         maxMoveSpeed = mouseScript.maxMoveSpeed;
         smoothTime = mouseScript.smoothTime;
+        startPosition = transform.position;
+        
     }
 
     // Update is called once per frame
@@ -37,6 +42,7 @@ public class Collectable : MonoBehaviour
         LayerMask mask = LayerMask.GetMask("Collectable");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1, mask);
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        screenDifference = GetComponentInParent<Scroll>().Difference;
 
         /*if (hit.collider == text)
         {
@@ -54,13 +60,10 @@ public class Collectable : MonoBehaviour
                 found = true;
             }
         }
-
-        
-
-        /*else
+        else
         {
-            
-        }*/
+            transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
+        }
 
 
         if (found == true)
