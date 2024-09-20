@@ -47,6 +47,9 @@ TagManager:
   - name: Interactables
     uniqueID: 2218890603
     locked: 0
+  - name: Frame
+    uniqueID: 3063445139
+    locked: 0
   - name: Mouse
     uniqueID: 4044042323
     locked: 0

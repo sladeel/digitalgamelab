@@ -7,7 +7,7 @@ public class Scroll : MonoBehaviour
     public float scrollSpeed = 0.5f;
     float height;
     float startPosition;
-    float screenHeight = 8.316924f;
+    float screenHeight = 6.549636f;
     float difference = 0;
 
     // Start is called before the first frame update
@@ -20,11 +20,11 @@ public class Scroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.mouseScrollDelta.y < 0 && transform.position.y < startPosition + height - screenHeight)
+        if (Input.mouseScrollDelta.y < 0 && transform.position.y < startPosition + height - (screenHeight + scrollSpeed))
         {
             transform.position = new Vector2(transform.position.x, transform.position.y + scrollSpeed);
         }
-        else if (Input.mouseScrollDelta.y > 0 && transform.position.y > startPosition + scrollSpeed)
+        else if (Input.mouseScrollDelta.y > 0 && transform.position.y > startPosition)
         {
             transform.position = new Vector2(transform.position.x, transform.position.y - scrollSpeed);
         }
