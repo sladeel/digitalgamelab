@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     public float smoothTime = 0.3f;
     public float maxSpeed = 10;
     public GameObject notebook;
-
+    public float speed = 3;
 
 
     // Start is called before the first frame update
@@ -24,21 +24,25 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(position)
+
+        switch (position)
         {
             case "screen":
                 cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, 5, ref velocityZoom, smoothTime, maxSpeed);
                 transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0, 0, -10), ref velocityMove, smoothTime, maxSpeed);
 
                 notebook.transform.position = Vector3.SmoothDamp(notebook.transform.position, new Vector3(-0.26f, -8.08f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
+                notebook.transform.localScale = Vector3.Lerp(notebook.transform.localScale, new Vector3(0.5437f, 0.5437f, 0.5437f), speed * Time.deltaTime);
 
                 break;
             case "desk":
                 cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, 10, ref velocityZoom, smoothTime, maxSpeed);
                 transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0, -1.15f, -10), ref velocityMove, smoothTime, maxSpeed);
 
-                notebook.transform.position = Vector3.SmoothDamp(notebook.transform.position, new Vector3(-0.26f, -16.32f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
+                notebook.transform.position = Vector3.SmoothDamp(notebook.transform.position, new Vector3(-0.26f, -20f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
+                notebook.transform.localScale = Vector3.Lerp(notebook.transform.localScale, new Vector3(0.5437f, 0.5437f, 0.5437f), speed * Time.deltaTime);
                 break;
         }
     }
 }
+

@@ -37,7 +37,7 @@ public class ZoomIn : MonoBehaviour
         if (hit.collider != null && click)
         {
             cam.position = "screen";
-            
+
             Debug.Log(hit.collider);
         }
     }
