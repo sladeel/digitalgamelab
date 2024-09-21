@@ -22,7 +22,8 @@ public class ZoomIn : MonoBehaviour
     {
         LayerMask mask = LayerMask.GetMask("Zoom In");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1, mask);
-        
+            
+
         if (requireClick == true)
         {
             click = Input.GetMouseButtonDown(0);
