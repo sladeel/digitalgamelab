@@ -8,6 +8,7 @@ public class ZoomIn : MonoBehaviour
     public CameraController cam;
     public bool requireClick = false;
     bool click;
+    
 
 
 
@@ -36,6 +37,7 @@ public class ZoomIn : MonoBehaviour
         if (hit.collider != null && click)
         {
             cam.position = "screen";
+            
             Debug.Log(hit.collider);
         }
     }

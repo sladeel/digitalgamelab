@@ -8,6 +8,7 @@ public class ZoomOut : MonoBehaviour
     public bool requireClick = false;
     bool click;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +30,10 @@ public class ZoomOut : MonoBehaviour
             click = true;
         }
 
-        if (hit.collider != null)
+        if (hit.collider != null && click)
         {
             cam.position = "desk";
+            
             Debug.Log(hit.collider);
         }
 
