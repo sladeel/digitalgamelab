@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420033}
+  book: {fileID: 1678152910}
   requireClick: 1
 --- !u!50 &97336244
 Rigidbody2D:
@@ -1377,7 +1378,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1402,7 +1403,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -1.15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1424,8 +1425,6 @@ MonoBehaviour:
   cam: {fileID: 0}
   smoothTime: 0.3
   maxSpeed: 10
-  notebook: {fileID: 1678152903}
-  speed: 3
 --- !u!1 &578674437
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,6 +3294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420033}
+  book: {fileID: 1678152910}
   requireClick: 0
 --- !u!1 &1417024750
 GameObject:
@@ -3678,6 +3678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420033}
+  book: {fileID: 1678152910}
   requireClick: 0
 --- !u!50 &1531698022
 Rigidbody2D:
@@ -4016,6 +4017,7 @@ GameObject:
   - component: {fileID: 1678152904}
   - component: {fileID: 1678152908}
   - component: {fileID: 1678152909}
+  - component: {fileID: 1678152910}
   m_Layer: 0
   m_Name: book
   m_TagString: Untagged
@@ -4111,8 +4113,8 @@ Transform:
   m_GameObject: {fileID: 1678152903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26, y: -8.55, z: -5.98}
-  m_LocalScale: {x: 0.5437, y: 0.5437, z: 0.5437}
+  m_LocalPosition: {x: -0.26, y: -0.53, z: -5.98}
+  m_LocalScale: {x: 1.0424, y: 1.0424, z: 1.0424}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4137,7 +4139,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678152903}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -4175,6 +4177,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.916697, y: 2.770074}
   m_EdgeRadius: 0
+--- !u!114 &1678152910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678152903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0a80a4e4e436a4ea03c494598c7012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 
+  smoothTime: 0.3
+  maxSpeed: 10
+  speed: 3
 --- !u!1 &1925961427
 GameObject:
   m_ObjectHideFlags: 0
