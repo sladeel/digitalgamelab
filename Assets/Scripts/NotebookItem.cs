@@ -19,11 +19,11 @@ public class NotebookItem : MonoBehaviour
         
     }
 
-    public void Display(Vector3 location)
+    public void Display()
     {
         if (notebook.collected[(notebook.collected.Count - 1)] == id)
         {
-            transform.localPosition = location;
+            transform.localPosition = notebook.location;
             gameObject.SetActive(true);
         }
         

@@ -38,7 +38,7 @@ public class Notebook : MonoBehaviour
 
 
         //sound.Play();
-        location = new Vector3(Random.Range(-7f, -2.6f), location.y + 0.9f, 5.736762f);
+        location = new Vector3(Random.Range(-7f, -2.6f), location.y - 0.9f, 5.736762f);
         
         
     }
