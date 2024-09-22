@@ -54,10 +54,18 @@ public class BookSelect : MonoBehaviour
         if (hit.collider != null && click)
         {
             cam.position = "desk";
-            book.position = "book";
             leftCollide.enabled = !leftCollide.enabled;
             rightCollide.enabled = !rightCollide.enabled;
             screenCollide.enabled = !screenCollide.enabled;
+            if (book.position != "book")
+            {
+                book.position = "book";
+            }
+            else
+            {
+                book.position = "desk";
+            }
+            
             Debug.Log(hit.collider);
         }
     }
