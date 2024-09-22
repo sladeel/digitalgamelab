@@ -56,3 +56,6 @@ TagManager:
   - name: World
     uniqueID: 2051440873
     locked: 0
+  - name: Notebook
+    uniqueID: 3361097751
+    locked: 0
