@@ -8,6 +8,8 @@ public class Click : MonoBehaviour
     Collider2D button;
     public GameObject CurrentPage;
     public GameObject NextPage;
+    public GameObject CurrentBg;
+    public GameObject NextBg;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,18 @@ public class Click : MonoBehaviour
         {
             CurrentPage.SetActive(false);
             NextPage.SetActive(true);
+
+            if (CurrentBg != NextBg)
+            {
+                if (CurrentBg != null)
+                {
+                    CurrentBg.SetActive(false);
+                }
+                if (NextBg != null)
+                {
+                    CurrentBg.SetActive(true);
+                }
+            }
         }
     }
 }
