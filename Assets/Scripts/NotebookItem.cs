@@ -5,7 +5,7 @@ using UnityEngine;
 public class NotebookItem : MonoBehaviour
 {
     public string id;
-    public Notebook notebook;
+    public Collector notebook;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class NotebookItem : MonoBehaviour
 
     public void Display()
     {
-        if (notebook.collected[(notebook.collected.Count - 1)] == id)
+        if (notebook.collected[notebook.collected.Count - 1] == id)
         {
             transform.localPosition = notebook.location;
             gameObject.SetActive(true);

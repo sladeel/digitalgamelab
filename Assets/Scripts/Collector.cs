@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Notebook : MonoBehaviour
+public class Collector : MonoBehaviour
 {
     public List<string> collected;
     public AudioSource sound;

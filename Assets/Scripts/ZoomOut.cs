@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZoomOut : MonoBehaviour
 {
     public CameraController cam;
-    public NotebookController book;
+    public NotepadController book;
     public bool requireClick = false;
     bool click;
 

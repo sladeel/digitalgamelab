@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NotebookController : MonoBehaviour
+public class NotepadController : MonoBehaviour
 {
     public string position;
     private Vector3 velocityBook;

@@ -9,7 +9,7 @@ public class Collectable : MonoBehaviour
     Collider2D notebookCollider;
     public GameObject mouse;
     private FollowMouse mouseScript;
-    private Notebook notebookScript;
+    private Collector notebookScript;
     public GameObject notebook;
     Vector2 difference;
     public string itemName;
@@ -29,7 +29,7 @@ public class Collectable : MonoBehaviour
         text = GetComponent<Collider2D>();
         notebookCollider = notebook.GetComponent<Collider2D>();
         mouseScript = mouse.GetComponent<FollowMouse>();
-        notebookScript = notebook.GetComponent<Notebook>();
+        notebookScript = notebook.GetComponent<Collector>();
         maxMoveSpeed = mouseScript.maxMoveSpeed;
         smoothTime = mouseScript.smoothTime;
         startPosition = transform.position;
