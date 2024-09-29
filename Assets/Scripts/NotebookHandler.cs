@@ -27,7 +27,7 @@ public class NotebookHandler : MonoBehaviour
         switch (position)
         {
             case "screen":
-                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(-0.26f, -8.08f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(-0.26f, -20f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
                 x = Mathf.SmoothDamp(transform.localScale.x, 0.5437f, ref velocityScale, smoothTime, maxSpeed);
                 transform.localScale = new Vector3(x, x, x);
 
