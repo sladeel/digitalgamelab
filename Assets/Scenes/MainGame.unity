@@ -321,6 +321,8 @@ GameObject:
   m_Component:
   - component: {fileID: 131329766}
   - component: {fileID: 131329767}
+  - component: {fileID: 131329769}
+  - component: {fileID: 131329768}
   m_Layer: 0
   m_Name: notepad
   m_TagString: Untagged
@@ -337,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 131329764}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.017834753, w: 0.99984103}
-  m_LocalPosition: {x: 0.66, y: -25, z: 0}
+  m_LocalPosition: {x: 0.66, y: -10.61, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -360,6 +362,66 @@ MonoBehaviour:
   smoothTime: 0.3
   maxSpeed: 20
   speed: 3
+--- !u!61 &131329768
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131329764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.030938268, y: -0.04617405}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.9004555, y: 6.88068}
+  m_EdgeRadius: 0
+--- !u!114 &131329769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131329764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd86be2cd741124ebcf455b19dbdc0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: []
+  sound: {fileID: 0}
+  location: {x: 0, y: 0, z: 0}
 --- !u!1 &221687497
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961427}
-  notebook: {fileID: 1678152903}
+  notebook: {fileID: 131329764}
   itemName: knife
 --- !u!1 &280631892
 GameObject:
@@ -632,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: knife
-  notebook: {fileID: 1678152908}
+  notebook: {fileID: 131329769}
 --- !u!1 &307414616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2308,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2271,7 +2333,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -1.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2503,7 +2565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: murder
-  notebook: {fileID: 1678152908}
+  notebook: {fileID: 131329769}
 --- !u!1 &661246339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,7 +2914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961427}
-  notebook: {fileID: 1678152903}
+  notebook: {fileID: 131329764}
   itemName: paul
 --- !u!1 &725207328
 GameObject:
@@ -2952,7 +3014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: paul
-  notebook: {fileID: 1678152908}
+  notebook: {fileID: 131329769}
 --- !u!1 &759197693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961427}
-  notebook: {fileID: 1678152903}
+  notebook: {fileID: 131329764}
   itemName: sweetpea
 --- !u!50 &762052874
 Rigidbody2D:
@@ -4255,7 +4317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: jenna
-  notebook: {fileID: 1678152908}
+  notebook: {fileID: 131329769}
 --- !u!1 &1026041980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4856,7 +4918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961427}
-  notebook: {fileID: 1678152903}
+  notebook: {fileID: 131329764}
   itemName: jenna
 --- !u!1 &1357347336
 GameObject:
@@ -5504,7 +5566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961427}
-  notebook: {fileID: 1678152903}
+  notebook: {fileID: 131329764}
   itemName: murder
 --- !u!1 &1514064214
 GameObject:
@@ -6381,8 +6443,6 @@ GameObject:
   - component: {fileID: 1678152907}
   - component: {fileID: 1678152906}
   - component: {fileID: 1678152904}
-  - component: {fileID: 1678152908}
-  - component: {fileID: 1678152909}
   - component: {fileID: 1678152910}
   m_Layer: 0
   m_Name: book
@@ -6491,66 +6551,6 @@ Transform:
   - {fileID: 1786166621}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.847}
---- !u!114 &1678152908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678152903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bd86be2cd741124ebcf455b19dbdc0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collected: []
-  sound: {fileID: 0}
-  location: {x: 0, y: 0, z: 0}
---- !u!61 &1678152909
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678152903}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.46067142, y: 6.484856}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 38.399998, y: 21.599998}
-    newSize: {x: 9.38, y: 1.14}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22.916697, y: 2.770074}
-  m_EdgeRadius: 0
 --- !u!114 &1678152910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7070,7 +7070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961427}
-  notebook: {fileID: 1678152903}
+  notebook: {fileID: 131329764}
   itemName: creditcard
 --- !u!212 &1991873746
 SpriteRenderer:
@@ -7752,7 +7752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961427}
-  notebook: {fileID: 1678152903}
+  notebook: {fileID: 131329764}
   itemName: assassin
 --- !u!50 &2072419368
 Rigidbody2D:

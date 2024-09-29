@@ -27,7 +27,7 @@ public class NotepadController : MonoBehaviour
         switch (position)
         {
             case "screen":
-                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0.66f, -10.91f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0.66f, -10.61f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
                 x = Mathf.SmoothDamp(transform.localScale.x, 2f, ref velocityScale, smoothTime, maxSpeed);
                 transform.localScale = new Vector3(x, x, x);
 
