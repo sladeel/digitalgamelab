@@ -7,6 +7,7 @@ public class BookSelect : MonoBehaviour
     public CameraController cam;
     public NotepadController pad;
     public NotebookHandler book;
+    public FollowMouse mouseActive;
     public bool requireClick = false;
     bool click;
     public SpriteRenderer visualBook;
@@ -62,11 +63,13 @@ public class BookSelect : MonoBehaviour
             {
                 book.position = "book";
                 pad.position = "book";
+                mouseActive.screenActive = false;
             }
             else
             {
                 book.position = "desk";
                 pad.position = "desk";
+                mouseActive.screenActive = true;
             }
             
             Debug.Log(hit.collider);

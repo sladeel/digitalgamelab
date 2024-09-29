@@ -8,6 +8,7 @@ public class ZoomIn : MonoBehaviour
     public CameraController cam;
     public NotepadController pad;
     public NotebookHandler book;
+    public FollowMouse mouse;
     public bool requireClick = false;
     bool click;
     
@@ -41,6 +42,7 @@ public class ZoomIn : MonoBehaviour
             cam.position = "screen";
             book.position = "screen";
             pad.position = "screen";
+            mouse.screenActive = true;
 
             Debug.Log(hit.collider);
         }

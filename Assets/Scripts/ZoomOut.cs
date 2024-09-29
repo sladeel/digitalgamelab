@@ -7,6 +7,7 @@ public class ZoomOut : MonoBehaviour
     public CameraController cam;
     public NotepadController pad;
     public NotebookHandler book;
+    public FollowMouse mouse;
     public bool requireClick = false;
     bool click;
 
@@ -36,6 +37,7 @@ public class ZoomOut : MonoBehaviour
             cam.position = "desk";
             book.position = "desk";
             pad.position = "desk";
+            mouse.screenActive = true;
 
             Debug.Log(hit.collider);
         }
