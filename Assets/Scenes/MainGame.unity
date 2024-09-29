@@ -284,6 +284,7 @@ MonoBehaviour:
   pad: {fileID: 131329767}
   book: {fileID: 1678152910}
   mouse: {fileID: 1925961430}
+  pencil: {fileID: 1898100764}
   requireClick: 1
 --- !u!50 &97336244
 Rigidbody2D:
@@ -340,8 +341,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131329764}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.017834753, w: 0.99984103}
-  m_LocalPosition: {x: 0.66, y: -25, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.009661557, w: 0.9999534}
+  m_LocalPosition: {x: 0.16, y: -25, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -351,7 +352,7 @@ Transform:
   - {fileID: 725207329}
   - {fileID: 280631893}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.107}
 --- !u!114 &131329767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,6 +2205,7 @@ MonoBehaviour:
   pad: {fileID: 131329767}
   book: {fileID: 1678152910}
   mouseActive: {fileID: 1925961430}
+  pencil: {fileID: 1898100764}
   requireClick: 1
   visualBook: {fileID: 412974843}
   collide: {fileID: 412974840}
@@ -7000,6 +7002,7 @@ MonoBehaviour:
   pad: {fileID: 131329767}
   book: {fileID: 1678152910}
   mouse: {fileID: 1925961430}
+  pencil: {fileID: 1898100764}
   requireClick: 0
 --- !u!1 &1417024750
 GameObject:
@@ -7646,6 +7649,7 @@ MonoBehaviour:
   pad: {fileID: 131329767}
   book: {fileID: 1678152910}
   mouse: {fileID: 1925961430}
+  pencil: {fileID: 1898100764}
   requireClick: 0
 --- !u!50 &1531698022
 Rigidbody2D:
@@ -8885,6 +8889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898100763}
   - component: {fileID: 1898100762}
+  - component: {fileID: 1898100764}
   m_Layer: 0
   m_Name: pencil
   m_TagString: Untagged
@@ -8953,12 +8958,28 @@ Transform:
   m_GameObject: {fileID: 1898100761}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.23345621, w: 0.9723673}
-  m_LocalPosition: {x: 6.57, y: -5.32, z: 0}
+  m_LocalPosition: {x: 6.57, y: -14.17, z: 0}
   m_LocalScale: {x: 1.4525, y: 1.4525, z: 1.4525}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.001}
+--- !u!114 &1898100764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898100761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f20b095db57064abc8391d73807d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 
+  smoothTime: 0.3
+  maxSpeed: 10
+  speed: 3
 --- !u!1 &1925961427
 GameObject:
   m_ObjectHideFlags: 0

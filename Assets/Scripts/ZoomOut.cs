@@ -8,6 +8,7 @@ public class ZoomOut : MonoBehaviour
     public NotepadController pad;
     public NotebookHandler book;
     public FollowMouse mouse;
+    public PencilController pencil;
     public bool requireClick = false;
     bool click;
 
@@ -38,6 +39,7 @@ public class ZoomOut : MonoBehaviour
             book.position = "desk";
             pad.position = "desk";
             mouse.screenActive = true;
+            pencil.position = "desk";
 
             Debug.Log(hit.collider);
         }

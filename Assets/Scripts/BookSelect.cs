@@ -8,6 +8,7 @@ public class BookSelect : MonoBehaviour
     public NotepadController pad;
     public NotebookHandler book;
     public FollowMouse mouseActive;
+    public PencilController pencil;
     public bool requireClick = false;
     bool click;
     public SpriteRenderer visualBook;
@@ -64,12 +65,14 @@ public class BookSelect : MonoBehaviour
                 book.position = "book";
                 pad.position = "book";
                 mouseActive.screenActive = false;
+                pencil.position = "book";
             }
             else
             {
                 book.position = "desk";
                 pad.position = "desk";
                 mouseActive.screenActive = true;
+                pencil.position = "desk";
             }
             
             Debug.Log(hit.collider);

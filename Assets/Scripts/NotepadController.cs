@@ -28,6 +28,9 @@ public class NotepadController : MonoBehaviour
         {
             case "screen":
                 transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0.66f, -10.61f, -5.98f), ref velocityBook, smoothTime, maxSpeed);
+                currentEuler = Vector3.SmoothDamp(currentEuler, new Vector3(0, 0, 1.107f), ref velocitySpin, smoothTime, maxSpeed);
+                currentRotation.eulerAngles = currentEuler;
+                transform.rotation = currentRotation;
                 x = Mathf.SmoothDamp(transform.localScale.x, 2f, ref velocityScale, smoothTime, maxSpeed);
                 transform.localScale = new Vector3(x, x, x);
 
