@@ -5,7 +5,8 @@ using UnityEngine;
 public class BookSelect : MonoBehaviour
 {
     public CameraController cam;
-    public NotepadController book;
+    public NotepadController pad;
+    public NotebookHandler book;
     public bool requireClick = false;
     bool click;
     public SpriteRenderer visualBook;
@@ -60,10 +61,12 @@ public class BookSelect : MonoBehaviour
             if (book.position != "book")
             {
                 book.position = "book";
+                pad.position = "book";
             }
             else
             {
                 book.position = "desk";
+                pad.position = "desk";
             }
             
             Debug.Log(hit.collider);

@@ -31,8 +31,8 @@ public class CameraController : MonoBehaviour
 
                 break;
             case "desk":
-                cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, 10, ref velocityZoom, smoothTime, maxSpeed);
-                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0, -1.15f, -10), ref velocityMove, smoothTime, maxSpeed);
+                cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, 10.8f, ref velocityZoom, smoothTime, maxSpeed);
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(0, -1.21f, -10), ref velocityMove, smoothTime, maxSpeed);
 
                 break;
         }
