@@ -37,7 +37,7 @@ public class Collector : MonoBehaviour
         }
 
 
-        //sound.Play();
+        sound.Play();
         location = new Vector3(Random.Range(-0.09f, 0.09f), location.y - 0.425f, 5.736762f);
         
         
