@@ -14,11 +14,14 @@ public class NotebookHandler : MonoBehaviour
     private float x;
     private Vector3 currentEuler;
     private Quaternion currentRotation;
+    
+    public int page;
+    public int length;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        page = 1;
     }
 
     // Update is called once per frame
