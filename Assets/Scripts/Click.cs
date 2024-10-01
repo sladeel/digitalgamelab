@@ -8,6 +8,7 @@ public class Click : MonoBehaviour
     Collider2D button;
     public GameObject CurrentPage;
     public GameObject NextPage;
+    public BrowserHistory history;
     
     private GameObject CurrentBg;
     private GameObject NextBg;
@@ -25,9 +26,10 @@ public class Click : MonoBehaviour
     {
         if (mouse.IsTouching(button) && Input.GetMouseButtonDown(0))
         {
+            history.NewPage(NextPage);
             CurrentPage.SetActive(false);
             NextPage.SetActive(true);
-
+            
             if (CurrentBg != NextBg)
             {
                 CurrentBg.SetActive(false);
@@ -35,4 +37,8 @@ public class Click : MonoBehaviour
             }
         }
     }
+
+    
+
+
 }
