@@ -12,6 +12,7 @@ public class VNHandler : MonoBehaviour
     public TextAsset dialogueFile;
     public RectTransform label;
     public string scene;
+    public float wait = 0.5f;
 
     private string[] speakerList;
     private string[] dialogueList;
@@ -48,6 +49,7 @@ public class VNHandler : MonoBehaviour
         if (speakerList.Length - 1 != position)
         {
             position++;
+            //StartCoroutine(DisplayText());
         }
         else
         {
@@ -55,4 +57,15 @@ public class VNHandler : MonoBehaviour
         }
         
     }
+
+    IEnumerator DisplayText()
+    {
+        for (int i = 0; i < dialogueList[position].Length; i++)
+        {
+            dialogue.text = dialogueList[position].Substring(0, i + 1);
+            //Debug.Log(dialogueList[position].Substring(0, i + 1));
+            yield return new WaitForSeconds(wait);
+        }
+    }
+
 }
