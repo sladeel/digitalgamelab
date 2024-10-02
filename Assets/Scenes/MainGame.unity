@@ -8040,7 +8040,7 @@ MonoBehaviour:
   book: {fileID: 1678152910}
   mouse: {fileID: 1925961430}
   pencil: {fileID: 1898100764}
-  requireClick: 0
+  requireClick: 1
 --- !u!1 &1417024750
 GameObject:
   m_ObjectHideFlags: 0
@@ -8845,7 +8845,7 @@ MonoBehaviour:
   book: {fileID: 1678152910}
   mouse: {fileID: 1925961430}
   pencil: {fileID: 1898100764}
-  requireClick: 0
+  requireClick: 1
 --- !u!50 &1531698022
 Rigidbody2D:
   serializedVersion: 4
@@ -10965,7 +10965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMoveSpeed: 10
-  smoothTime: 0.3
+  smoothTime: 0.2
   minX: -5.72
   maxX: 5.51
   minY: -4.03
