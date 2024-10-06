@@ -11,14 +11,16 @@ public class FollowMouse : MonoBehaviour
     public float minY = -3.723f;
     public float maxY = 3.755f;
 
+    public bool screenActive;
 
     Vector2 currentVelocity;
+    
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        screenActive = true;
     }
 
     // Update is called once per frame
@@ -26,17 +28,20 @@ public class FollowMouse : MonoBehaviour
     void Update()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        if ((transform.position.x >= minX && transform.position.x <= maxX && transform.position.y >= minY && transform.position.y <= maxY) || (mousePosition.x >= minX && mousePosition.x <= maxX && mousePosition.y >= minY && mousePosition.y <= maxY))
-            {
-            transform.position = Vector2.SmoothDamp(transform.position, mousePosition, ref currentVelocity, smoothTime, maxMoveSpeed);
-            Cursor.visible = false;
-        }
-        else
+
+
+        if (screenActive)
         {
-            Cursor.visible = true;
+            if ((transform.position.x >= minX && transform.position.x <= maxX && transform.position.y >= minY && transform.position.y <= maxY) || (mousePosition.x >= minX && mousePosition.x <= maxX && mousePosition.y >= minY && mousePosition.y <= maxY))
+            {
+                transform.position = Vector2.SmoothDamp(transform.position, mousePosition, ref currentVelocity, smoothTime, maxMoveSpeed);
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.visible = true;
+            }
         }
-        
         
         
         

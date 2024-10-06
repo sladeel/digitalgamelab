@@ -5,7 +5,10 @@ using UnityEngine;
 public class BookSelect : MonoBehaviour
 {
     public CameraController cam;
-    public NotepadController book;
+    public NotepadController pad;
+    public NotebookHandler book;
+    public FollowMouse mouseActive;
+    public PencilController pencil;
     public bool requireClick = false;
     bool click;
     public SpriteRenderer visualBook;
@@ -60,10 +63,16 @@ public class BookSelect : MonoBehaviour
             if (book.position != "book")
             {
                 book.position = "book";
+                pad.position = "book";
+                mouseActive.screenActive = false;
+                pencil.position = "book";
             }
             else
             {
                 book.position = "desk";
+                pad.position = "desk";
+                mouseActive.screenActive = true;
+                pencil.position = "desk";
             }
             
             Debug.Log(hit.collider);

@@ -12,7 +12,7 @@ public class Collector : MonoBehaviour
     void Start()
     {
         collected = new List<string>();
-        location = new Vector3(-6.59f, 5.82f, 5.736762f);
+        location = new Vector3(-0.09f, 1.416f, 0.2326224f);
     }
 
     // Update is called once per frame
@@ -37,8 +37,8 @@ public class Collector : MonoBehaviour
         }
 
 
-        //sound.Play();
-        location = new Vector3(Random.Range(-7f, -2.6f), location.y - 0.9f, 5.736762f);
+        sound.Play();
+        location = new Vector3(Random.Range(-0.09f, 0.09f), location.y - 0.425f, 5.736762f);
         
         
     }
