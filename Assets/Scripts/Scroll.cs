@@ -7,7 +7,7 @@ public class Scroll : MonoBehaviour
     public float scrollSpeed = 0.5f;
     float height;
     float startPosition;
-    float screenHeight = 6.549636f;
+    float screenHeight = 6.440722f;
     float difference = 0;
 
     // Start is called before the first frame update
@@ -34,5 +34,10 @@ public class Scroll : MonoBehaviour
     public float Difference
     {
         get { return difference; }
+    }
+
+    public float StartPosition
+    {
+        get { return startPosition; }
     }
 }

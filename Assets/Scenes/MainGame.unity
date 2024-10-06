@@ -5507,7 +5507,7 @@ Transform:
   m_GameObject: {fileID: 906403084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3784893, y: -4.35, z: -3.1560335}
+  m_LocalPosition: {x: -1.3784893, y: -4.44, z: -3.1560335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12095,7 +12095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouse: {fileID: 1925961431}
   CurrentPage: {fileID: 370303841}
-  NextPage: {fileID: 0}
+  NextPage: {fileID: 168316868}
   history: {fileID: 896121741}
 --- !u!212 &2134597942
 SpriteRenderer:

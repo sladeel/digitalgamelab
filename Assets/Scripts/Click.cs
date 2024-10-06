@@ -12,6 +12,8 @@ public class Click : MonoBehaviour
     
     private GameObject CurrentBg;
     private GameObject NextBg;
+    private Scroll scroll;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class Click : MonoBehaviour
         button = GetComponent<Collider2D>();
         CurrentBg = CurrentPage.transform.parent.gameObject;
         NextBg = NextPage.transform.parent.gameObject;
+        scroll = NextPage.GetComponent<Scroll>();
     }
 
     // Update is called once per frame
@@ -29,7 +32,8 @@ public class Click : MonoBehaviour
             history.NewPage(NextPage);
             CurrentPage.SetActive(false);
             NextPage.SetActive(true);
-            
+            NextPage.transform.position = new Vector2(NextPage.transform.position.x, scroll.StartPosition);
+
             if (CurrentBg != NextBg)
             {
                 CurrentBg.SetActive(false);

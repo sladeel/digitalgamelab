@@ -28,6 +28,10 @@ public class WebButton : MonoBehaviour
                 case "forwards":
                     history.Forward();
                     break;
+                case "home":
+                    break;
+                case "refresh":
+                    break;
             }
         }
     }
