@@ -38,6 +38,7 @@ public class NoteHandler : MonoBehaviour
         LayerMask mask = LayerMask.GetMask("Collectable");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1, mask);
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
         startPosition = parentClue.transform.position;
 
         /*if (hit.collider == text)
