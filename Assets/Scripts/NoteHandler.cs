@@ -11,6 +11,7 @@ public class NoteHandler : MonoBehaviour
     public bool onPage = false;
     public GameObject notebook;
     Collider2D notebookCollider;
+    public CompositeCollider2D notNotebookCollider;
     public NotebookHandler notebookHandler;
     public NotebookItem parentClue;
 
@@ -43,7 +44,7 @@ public class NoteHandler : MonoBehaviour
 
         if (hit.collider == clue && Input.GetMouseButton(0))
         {
-            Debug.Log("Success! Hit " + hit.collider);
+            //Debug.Log("Success! Hit " + hit.collider);
         }
         if (/*(mouse.GetComponent<Collider2D>().IsTouching(clue) ||*/ (hit.collider == clue) && Input.GetMouseButton(0))
         {
@@ -54,10 +55,14 @@ public class NoteHandler : MonoBehaviour
             transform.position = mousePosition;
 
 
-            if (notebookCollider.IsTouching(clue))
+            if (notebookCollider.IsTouching(clue) && !(notNotebookCollider.IsTouching(clue)))
             {
-                
+                //Debug.Log("Success! " + clue + " is touching " + notebookCollider);
                 onPage = true;
+            }
+            else
+            {
+                onPage = false;
             }
         }
         else if (onPage == false)

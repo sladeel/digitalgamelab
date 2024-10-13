@@ -172,6 +172,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 587295637}
   maxMoveSpeed: 10
@@ -350,6 +351,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 393760297}
   maxMoveSpeed: 10
@@ -528,6 +530,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 280631895}
   maxMoveSpeed: 10
@@ -982,6 +985,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 950409331}
   maxMoveSpeed: 40
@@ -1478,6 +1482,349 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &134696851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 134696852}
+  - component: {fileID: 134696858}
+  - component: {fileID: 134696857}
+  - component: {fileID: 134696856}
+  - component: {fileID: 134696855}
+  - component: {fileID: 134696854}
+  - component: {fileID: 134696853}
+  m_Layer: 0
+  m_Name: not page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &134696852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134696851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1678152907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!66 &134696853
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134696851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 134696855}
+    m_ColliderPaths:
+    - - X: 136527408
+        Y: -95251328
+      - X: -5617494
+        Y: -95251328
+      - X: -5617494
+        Y: -107554512
+      - X: 136527408
+        Y: -107554512
+  - m_Collider: {fileID: 134696856}
+    m_ColliderPaths:
+    - - X: 136176768
+        Y: 87262296
+      - X: -5617494
+        Y: 87262296
+      - X: -5617494
+        Y: 73938232
+      - X: 136176768
+        Y: 73938232
+  - m_Collider: {fileID: 134696857}
+    m_ColliderPaths:
+    - - X: 135952160
+        Y: 86784576
+      - X: 124824752
+        Y: 86784576
+      - X: 124824752
+        Y: -107956752
+      - X: 135952160
+        Y: -107956752
+  - m_Collider: {fileID: 134696858}
+    m_ColliderPaths:
+    - - X: 5617494
+        Y: 86882704
+      - X: -5617494
+        Y: 86882704
+      - X: -5617494
+        Y: -106353072
+      - X: 5617494
+        Y: -106353072
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 13.595187, y: -10.795675}
+      - {x: 13.595245, y: -10.755451}
+      - {x: 13.652741, y: -10.755422}
+      - {x: 13.652712, y: -9.525133}
+      - {x: 13.595216, y: -9.525104}
+      - {x: 13.595245, y: 7.393823}
+      - {x: 13.617677, y: 7.3938527}
+      - {x: 13.617648, y: 8.72623}
+      - {x: -0.5617494, y: 8.7262}
+      - {x: -0.56172013, y: -10.755451}
+      - {x: 12.482475, y: -10.755481}
+      - {x: 12.482505, y: -10.795675}
+    - - {x: 12.482475, y: -9.525104}
+      - {x: 0.5617494, y: -9.525104}
+      - {x: 0.5617788, y: 7.393823}
+      - {x: 12.482475, y: 7.3937936}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+  m_UseDelaunayMesh: 0
+  m_CompositeGameObject: {fileID: 134696851}
+--- !u!50 &134696854
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134696851}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &134696855
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134696851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 5.8259926, y: -9.025637}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.651985, y: 1.0950775}
+  m_EdgeRadius: 0
+--- !u!61 &134696856
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134696851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 5.8103876, y: 7.174041}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.620775, y: 1.1859436}
+  m_EdgeRadius: 0
+--- !u!61 &134696857
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134696851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 11.605572, y: -0.9422431}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9904251, y: 17.33347}
+  m_EdgeRadius: 0
+--- !u!61 &134696858
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134696851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: -0.8665054}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 17.199465}
+  m_EdgeRadius: 0
 --- !u!1 &168316868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,6 +2295,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 912423915}
   maxMoveSpeed: 10
@@ -2300,6 +2648,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1795320639}
   maxMoveSpeed: 40
@@ -2478,6 +2827,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1529002059}
   maxMoveSpeed: 10
@@ -2755,6 +3105,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 393760297}
   maxMoveSpeed: 10
@@ -3125,6 +3476,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1665008246}
   maxMoveSpeed: 40
@@ -3303,6 +3655,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1795320639}
   maxMoveSpeed: 10
@@ -4151,6 +4504,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 280631895}
   maxMoveSpeed: 10
@@ -4516,6 +4870,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 950409331}
   maxMoveSpeed: 10
@@ -4995,6 +5350,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 591707300}
   maxMoveSpeed: 10
@@ -5173,6 +5529,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 587295637}
   maxMoveSpeed: 40
@@ -5818,6 +6175,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 393760297}
   maxMoveSpeed: 10
@@ -6469,6 +6827,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 725207331}
   maxMoveSpeed: 10
@@ -6731,6 +7090,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 587295637}
   maxMoveSpeed: 10
@@ -7021,6 +7381,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1529002059}
   maxMoveSpeed: 10
@@ -7873,6 +8234,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 950409331}
   maxMoveSpeed: 10
@@ -8051,6 +8413,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1665008246}
   maxMoveSpeed: 10
@@ -8229,6 +8592,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 591707300}
   maxMoveSpeed: 10
@@ -8407,6 +8771,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 591707300}
   maxMoveSpeed: 10
@@ -9010,6 +9375,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1795320639}
   maxMoveSpeed: 10
@@ -9705,6 +10071,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1795320639}
   maxMoveSpeed: 10
@@ -9883,6 +10250,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 393760297}
   maxMoveSpeed: 40
@@ -11074,6 +11442,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 946184826}
   maxMoveSpeed: 10
@@ -11435,6 +11804,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 725207331}
   maxMoveSpeed: 10
@@ -11613,6 +11983,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 912423915}
   maxMoveSpeed: 40
@@ -11939,6 +12310,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 725207331}
   maxMoveSpeed: 40
@@ -12536,6 +12908,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 912423915}
   maxMoveSpeed: 10
@@ -12798,6 +13171,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 393760297}
   maxMoveSpeed: 10
@@ -12976,6 +13350,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 950409331}
   maxMoveSpeed: 10
@@ -13154,6 +13529,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1529002059}
   maxMoveSpeed: 40
@@ -13416,6 +13792,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1665008246}
   maxMoveSpeed: 10
@@ -13828,6 +14205,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 280631895}
   maxMoveSpeed: 10
@@ -14048,6 +14426,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 950409331}
   maxMoveSpeed: 10
@@ -14227,6 +14606,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 280631895}
   maxMoveSpeed: 40
@@ -14739,6 +15119,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 912423915}
   maxMoveSpeed: 10
@@ -14917,6 +15298,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 587295637}
   maxMoveSpeed: 10
@@ -15271,6 +15653,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 912423915}
   maxMoveSpeed: 10
@@ -15449,6 +15832,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 587295637}
   maxMoveSpeed: 10
@@ -15751,6 +16135,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 725207331}
   maxMoveSpeed: 10
@@ -16137,6 +16522,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1529002059}
   maxMoveSpeed: 10
@@ -16315,6 +16701,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 912423915}
   maxMoveSpeed: 10
@@ -16553,6 +16940,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1795320639}
   maxMoveSpeed: 10
@@ -16731,6 +17119,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 393760297}
   maxMoveSpeed: 10
@@ -17342,6 +17731,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1529002059}
   maxMoveSpeed: 10
@@ -17743,6 +18133,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 591707300}
   maxMoveSpeed: 10
@@ -17921,6 +18312,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 591707300}
   maxMoveSpeed: 10
@@ -18099,6 +18491,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1795320639}
   maxMoveSpeed: 10
@@ -18277,6 +18670,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 950409331}
   maxMoveSpeed: 10
@@ -18559,6 +18953,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 725207331}
   maxMoveSpeed: 10
@@ -18737,6 +19132,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 946184826}
   maxMoveSpeed: 40
@@ -19104,6 +19500,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 280631895}
   maxMoveSpeed: 10
@@ -19716,6 +20113,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 587295637}
   maxMoveSpeed: 10
@@ -19894,6 +20292,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 946184826}
   maxMoveSpeed: 10
@@ -20387,6 +20786,7 @@ Transform:
   - {fileID: 637155476}
   - {fileID: 1609190293}
   - {fileID: 47133133}
+  - {fileID: 134696852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.847}
 --- !u!114 &1678152910
@@ -20436,7 +20836,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 5.768818, y: -1.0270052}
@@ -20536,6 +20936,7 @@ MonoBehaviour:
   page: 5
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 946184826}
   maxMoveSpeed: 10
@@ -20861,6 +21262,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1665008246}
   maxMoveSpeed: 10
@@ -21578,6 +21980,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 280631895}
   maxMoveSpeed: 10
@@ -21756,6 +22159,7 @@ MonoBehaviour:
   page: 6
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1665008246}
   maxMoveSpeed: 10
@@ -22209,6 +22613,7 @@ MonoBehaviour:
   page: 4
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 946184826}
   maxMoveSpeed: 10
@@ -22387,6 +22792,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 725207331}
   maxMoveSpeed: 10
@@ -22611,6 +23017,7 @@ MonoBehaviour:
   page: 3
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1529002059}
   maxMoveSpeed: 10
@@ -23562,6 +23969,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 1665008246}
   maxMoveSpeed: 10
@@ -23999,6 +24407,7 @@ MonoBehaviour:
   page: 1
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 591707300}
   maxMoveSpeed: 40
@@ -24189,6 +24598,7 @@ MonoBehaviour:
   page: 2
   onPage: 0
   notebook: {fileID: 1678152903}
+  notNotebookCollider: {fileID: 134696853}
   notebookHandler: {fileID: 1678152910}
   parentClue: {fileID: 946184826}
   maxMoveSpeed: 10
