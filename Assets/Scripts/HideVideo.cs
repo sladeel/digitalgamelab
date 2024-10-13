@@ -19,7 +19,7 @@ public class HideVideo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        videoTime = (float)video.length;
+        //videoTime = (float)video.length;
         Invoke("videoEnded", videoTime);
     }
 
