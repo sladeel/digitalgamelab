@@ -2,7 +2,7 @@
 *Til Death Do Us Part* is a mystery puzzle game. 
 
 ## Development Team
-Jessica Harmer - Lead Writer/Co-Designer
+Jessica Harmer - Writer/Co-Designer
 
 Camille Louis-Abeysinghe - Environment/UI Artist
 
@@ -10,7 +10,7 @@ Josie Richmond - Character/2D Artist
 
 Eleanor Slade - Programmer/Producer
 
-Jayden Van - Concept Artist/Lead Designer
+Jayden Van - Concept Artist/Lead Designer/Lead Writer
 
 ## Useful Links
 [Main Info Doc](https://docs.google.com/document/d/1BtbR-lE4DonT0De6bzgwO1y2SARBUh3zgTnbYJIEPCU/edit?usp=sharing)
