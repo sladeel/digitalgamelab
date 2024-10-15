@@ -28,9 +28,11 @@ public class NoteHandler : MonoBehaviour
         clue = GetComponent<Collider2D>();
         clueRender = GetComponent<Renderer>();
         notebookCollider = notebook.GetComponent<Collider2D>();
-        
-        
 
+        clue.enabled = !clue.enabled;
+        clueRender.enabled = !clueRender.enabled;
+
+        Debug.Log(clue.enabled);
     }
 
     // Update is called once per frame
@@ -75,7 +77,7 @@ public class NoteHandler : MonoBehaviour
             transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
         }
 
-        if (notebookHandler.page == page)
+        if (notebookHandler.page == page && parentClue.active)
         {
             if (clue.enabled != true)
             {

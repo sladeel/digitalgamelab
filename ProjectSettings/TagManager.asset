@@ -59,3 +59,6 @@ TagManager:
   - name: Notebook
     uniqueID: 3361097751
     locked: 0
+  - name: Notepad
+    uniqueID: 2000253689
+    locked: 0

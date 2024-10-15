@@ -6,11 +6,13 @@ public class NotebookItem : MonoBehaviour
 {
     public string id;
     public Collector notebook;
+    public bool active;
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.SetActive(false);
+        active = false;
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class NotebookItem : MonoBehaviour
         {
             transform.localPosition = notebook.location;
             gameObject.SetActive(true);
+            active = true;
         }
         
      }
