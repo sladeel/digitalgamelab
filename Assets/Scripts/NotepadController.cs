@@ -18,7 +18,8 @@ public class NotepadController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = new Vector3(-6.2f, -25f, -5.98f);
+        transform.localScale = new Vector3(2f, 2f, 2f);
     }
 
     // Update is called once per frame

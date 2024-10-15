@@ -17,6 +17,8 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         cam = GetComponent<Camera>();
+        cam.orthographicSize = 10.8f;
+        transform.position = new Vector3(0, -1.21f, -10);
     }
 
     // Update is called once per frame

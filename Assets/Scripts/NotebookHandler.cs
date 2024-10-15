@@ -22,6 +22,8 @@ public class NotebookHandler : MonoBehaviour
     void Start()
     {
         page = 1;
+        transform.position = new Vector3(-0.26f, -20f, -5.98f);
+        transform.localScale = new Vector3(0.5437f, 0.5437f, 0.5437f);
     }
 
     // Update is called once per frame
