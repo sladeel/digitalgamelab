@@ -42,20 +42,25 @@ public class NoteHandler : MonoBehaviour
         
         startPosition = parentClue.transform.position;
 
-        if (hit.collider == clue && Input.GetMouseButton(0))
+        if (notNotebookCollider.IsTouching(clue))
+        {
+            Debug.Log(clue + " is touching " + notNotebookCollider);
+        }
+
+        if (hit.collider == clue && Input.GetMouseButton(0)) //check if clicking on collider
         {
             //Debug.Log("Success! Hit " + hit.collider);
         }
-        if (/*(mouse.GetComponent<Collider2D>().IsTouching(clue) ||*/ (hit.collider == clue) && Input.GetMouseButton(0))
+        if (/*(mouse.GetComponent<Collider2D>().IsTouching(clue) ||*/ (hit.collider == clue) && Input.GetMouseButton(0)) //check if clicking on collider. again. dw about it
         {
-            //difference = mousePosition - new Vector2 (transform.position.x, transform.position.y);
-            difference = new Vector2(0, 0);
+            //difference = mousePosition - new Vector2 (transform.position.x, transform.position.y); //this is supposed to get the location of click relative to the pivot of the object
+            difference = new Vector2(0, 0); //this is what happens when the code above breaks.
 
-            //transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed);
-            transform.position = mousePosition;
+            //transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed); //this used to follow on a delay. it was bad. in retrospect i dont know why i included it
+            transform.position = mousePosition; //follows the mouse. could probably factor in that difference math if i tried
 
 
-            if (notebookCollider.IsTouching(clue) && !(notNotebookCollider.IsTouching(clue)))
+            if (notebookCollider.IsTouching(clue) && !notNotebookCollider.IsTouching(clue)) //check that the notebook collider is touching and the not notebook collider isnt touching
             {
                 //Debug.Log("Success! " + clue + " is touching " + notebookCollider);
                 onPage = true;

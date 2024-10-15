@@ -21,6 +21,7 @@ public class TurnPage : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && hit.collider == collide)
         {
+            Debug.Log("Hit Page Turn!");
             if (forwards && book.page != book.length)
             {
                 book.page ++;
