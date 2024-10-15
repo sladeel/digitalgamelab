@@ -32,7 +32,12 @@ public class Click : MonoBehaviour
             history.NewPage(NextPage);
             CurrentPage.SetActive(false);
             NextPage.SetActive(true);
-            NextPage.transform.position = new Vector2(NextPage.transform.position.x, scroll.StartPosition);
+            
+            if (scroll != null)
+            {
+                NextPage.transform.position = new Vector2(NextPage.transform.position.x, scroll.StartPosition);
+            }
+            
 
             if (CurrentBg != NextBg)
             {

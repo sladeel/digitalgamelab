@@ -7,18 +7,30 @@ public class BrowserHistory : MonoBehaviour
     public Stack<GameObject> history;
     public Stack<GameObject> future;
     public GameObject currentPage;
+    public GameObject homePage;
+    Scroll pagePoint;
     
     // Start is called before the first frame update
     void Start()
     {
         history = new Stack<GameObject>();
         future = new Stack<GameObject>();
+        
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentPage.GetComponent<Scroll>() != null)
+        {
+            pagePoint = currentPage.GetComponent<Scroll>();
+        }
+        else
+        {
+            pagePoint = null;
+        }
     }
 
     public void NewPage(GameObject page)
@@ -64,5 +76,22 @@ public class BrowserHistory : MonoBehaviour
             CurrentBg.SetActive(false);
             NextBg.SetActive(true);
         }
+    }
+
+    public void RefreshPage()
+    {
+        if (pagePoint != null)
+        {
+            currentPage.transform.position = new Vector2(currentPage.transform.position.x, pagePoint.StartPosition);
+        }
+    }
+
+    public void HomePage()
+    {
+        ChangePage(currentPage, homePage);
+        history.Push(currentPage);
+        currentPage = homePage;
+        
+
     }
 }
