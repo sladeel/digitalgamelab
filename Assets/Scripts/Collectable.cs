@@ -13,7 +13,8 @@ public class Collectable : MonoBehaviour
     public GameObject notebook;
     Vector2 difference;
     public string itemName;
-
+    public string wordCategory;
+    public string wordSubcategory;
 
     float maxMoveSpeed;
     float smoothTime;
