@@ -482,6 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748092776}
   - component: {fileID: 748092775}
+  - component: {fileID: 748092777}
   m_Layer: 0
   m_Name: wife-normal
   m_TagString: Untagged
@@ -556,6 +557,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &748092777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748092774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715f8a19ec39d4d489aadef509fde1ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 748092775}
+  annoyed: {fileID: 21300000, guid: 76af2056807fdf241b72bda9d78696e4, type: 3}
+  concerned: {fileID: 21300000, guid: 1d7f66cdda3ee9a42aa116fe6cfc4865, type: 3}
+  confused: {fileID: 21300000, guid: 467c150658a0cae4c857215d0c90de62, type: 3}
+  defeated: {fileID: 21300000, guid: 46d679dea773ca14baa6cf2753ce5219, type: 3}
+  grrr: {fileID: 21300000, guid: d16e124369bae56469af6216b724d29e, type: 3}
+  happy: {fileID: 21300000, guid: f44f957a08569bc408e840deff159a47, type: 3}
+  normal: {fileID: 21300000, guid: 53185ab0d20155a4c827b5cfaaac6bab, type: 3}
 --- !u!1 &825078538
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,11 +908,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 695846780}
   dialogue: {fileID: 1835887009}
+  wife: {fileID: 748092777}
   speakerFile: {fileID: 4900000, guid: 61d0a948c43aa1445bc40a43bdf37fa6, type: 3}
   dialogueFile: {fileID: 4900000, guid: 8c31d189b3694974f91640201680151b, type: 3}
+  expressionFile: {fileID: 4900000, guid: 88186036f46741d4b9579c9cf454bf48, type: 3}
   label: {fileID: 931920947}
   scene: MainGame
   wait: 0.05
+  tempFile: test.txt
 --- !u!114 &1434022582
 MonoBehaviour:
   m_ObjectHideFlags: 0

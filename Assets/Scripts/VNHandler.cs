@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -8,23 +9,32 @@ public class VNHandler : MonoBehaviour
 {
     public TextMeshProUGUI speaker;
     public TextMeshProUGUI dialogue;
+    public ExpressionHandler wife;
     public TextAsset speakerFile;
     public TextAsset dialogueFile;
+    public TextAsset expressionFile;
     public RectTransform label;
     public string scene;
     public float wait = 0.5f;
 
+    public string tempFile;
+
+    char[] seperators = new char[] {'\n', '\r' };
+
     private string[] speakerList;
     private string[] dialogueList;
+    private string[] expressionList;
     private int position;
 
     // Start is called before the first frame update
     void Start()
     {
         position = 0;
-        speakerList = speakerFile.text.Split('\n');
-        dialogueList = dialogueFile.text.Split('\n');
+        speakerList = speakerFile.text.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
+        dialogueList = dialogueFile.text.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
+        expressionList = expressionFile.text.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
         
+        wife.Express(expressionList[position]);
     }
 
     // Update is called once per frame
@@ -32,15 +42,18 @@ public class VNHandler : MonoBehaviour
     {
         speaker.text = speakerList[position];
         dialogue.text = dialogueList[position];
+        
 
-        if (speakerList[position] == "You" || speakerList[position] == "You\r")
+        /*if (speakerList[position] == "You" || speakerList[position] == "You\r")  //This is a feature I like to call David Mode. I should like. Set it up fr.
         {
             label.anchoredPosition = new Vector2(620, -184.201f);
         }
         else
         {
             label.anchoredPosition = new Vector2(-589.8546f, -184.201f);
-        }
+        }*/
+
+
 
     }
 
@@ -49,7 +62,9 @@ public class VNHandler : MonoBehaviour
         if (speakerList.Length - 1 != position)
         {
             position++;
+            wife.Express(expressionList[position]);
             //StartCoroutine(DisplayText());
+            //Debug.Log(expressionList[position]);
         }
         else
         {
