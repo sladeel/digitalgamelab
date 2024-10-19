@@ -13435,6 +13435,8 @@ MonoBehaviour:
   visualPhone: {fileID: 914921703}
   collide: {fileID: 914921701}
   canvas: {fileID: 1637038652}
+  phone: {fileID: 1887044530}
+  textBox: {fileID: 1637038649}
   leftCollide: {fileID: 1393062282}
   rightCollide: {fileID: 1531698023}
   screenCollide: {fileID: 97336241}
@@ -24367,6 +24369,7 @@ MonoBehaviour:
   label: {fileID: 1316346268}
   canvas: {fileID: 1637038652}
   wait: 0.5
+  phone: {fileID: 1887044530}
   readThread: 0
 --- !u!114 &1637038650
 MonoBehaviour:
@@ -26465,8 +26468,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VNHandler, Assembly-CSharp
+      - m_Target: {fileID: 1637038649}
+        m_TargetAssemblyTypeName: TextHandler, Assembly-CSharp
         m_MethodName: Advance
         m_Mode: 1
         m_Arguments:

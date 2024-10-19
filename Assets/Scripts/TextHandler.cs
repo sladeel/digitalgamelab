@@ -15,7 +15,7 @@ public class TextHandler : MonoBehaviour
     public RectTransform label;
     public Canvas canvas;
     public float wait = 0.5f;
-
+    public PhoneController phone;
 
     char[] seperators = new char[] { '\n', '\r' };
 
@@ -36,6 +36,8 @@ public class TextHandler : MonoBehaviour
         {
             canvas.enabled = !canvas.enabled;
         }
+
+        NewThread();
     }
 
     // Update is called once per frame
@@ -77,6 +79,8 @@ public class TextHandler : MonoBehaviour
         {
             readThread = true;
             mouseActive.screenActive = true;
+            canvas.enabled = !canvas.enabled;
+            phone.position = "desk";
         }
 
     }

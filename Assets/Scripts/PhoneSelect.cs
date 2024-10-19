@@ -10,7 +10,8 @@ public class PhoneSelect : MonoBehaviour
     public SpriteRenderer visualPhone;
     public Collider2D collide;
     public Canvas canvas;
-
+    public PhoneController phone;
+    public TextHandler textBox;
 
     public Collider2D leftCollide;
     public Collider2D rightCollide;
@@ -60,7 +61,12 @@ public class PhoneSelect : MonoBehaviour
             bookCollide.enabled = !bookCollide.enabled;
 
             mouseActive.screenActive = false;
+            phone.position = "phone";
 
+            if (!canvas.enabled)
+            {
+                canvas.enabled = !canvas.enabled;
+            }
 
             //Debug.Log(hit.collider);
         }
