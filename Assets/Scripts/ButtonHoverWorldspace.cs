@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonHover : MonoBehaviour
+public class ButtonHoverWorldspace : MonoBehaviour
 {
     SpriteRenderer button;
     Collider2D collide;
-    public Collider2D mouse;
     public Sprite normal;
     public Sprite hover;
 
@@ -21,8 +20,10 @@ public class ButtonHover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (mouse.IsTouching(collide))
+        LayerMask mask = LayerMask.GetMask("Hover");
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1, mask);
+
+        if (hit == collide)
         {
             button.sprite = hover;
         }

@@ -4227,8 +4227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  collide: {fileID: 0}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: c7a229ddad53d124c93f15ee54a1941c, type: 3}
   hover: {fileID: 21300000, guid: 42e9a0b49a757c947ae45b7f0c8d4056, type: 3}
@@ -5461,8 +5459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 376597818}
-  collide: {fileID: 376597815}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: d4c1380a388c71246a45887387a9634c, type: 3}
   hover: {fileID: 21300000, guid: 5fbde6bdfc23c0c44b3154f1e79877ce, type: 3}
@@ -7908,8 +7904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  collide: {fileID: 0}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: b9873a9316bb9234dacc3d38cfface30, type: 3}
   hover: {fileID: 21300000, guid: 8064ac6dcfbba4d4dabe1045f0aff90f, type: 3}
@@ -13737,8 +13731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  collide: {fileID: 0}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: 86d7d8178ce8a6a4199eed19b233e499, type: 3}
   hover: {fileID: 21300000, guid: 66e319d54ee1e3847bebe3a6b97ef223, type: 3}
@@ -15361,8 +15353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  collide: {fileID: 0}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: 9c520cf825b51f443a89f3492d277627, type: 3}
   hover: {fileID: 21300000, guid: e741b04ca9c9a79459fcafd32693e741, type: 3}
@@ -16983,7 +16973,10 @@ GameObject:
   - component: {fileID: 1204031881}
   - component: {fileID: 1204031882}
   - component: {fileID: 1204031883}
-  m_Layer: 0
+  - component: {fileID: 1204031885}
+  - component: {fileID: 1204031884}
+  - component: {fileID: 1204031886}
+  m_Layer: 11
   m_Name: kill them
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17071,6 +17064,89 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
   page: 6
+--- !u!114 &1204031884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204031880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6683c485630d1554a88148f716c062c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal: {fileID: 21300000, guid: a9b2054dc665144468b86299e8b93b79, type: 3}
+  hover: {fileID: 21300000, guid: 3a343f2c2c4d2824296fcd2483cfd131, type: 3}
+--- !u!60 &1204031885
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204031880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.36, y: 3.21}
+    newSize: {x: 5.36, y: 3.21}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.4449499, y: -0.8785642}
+      - {x: 2.7012465, y: -0.66273654}
+      - {x: 2.3794596, y: 0.15957429}
+      - {x: -0.3981371, y: -0.17685753}
+      - {x: -0.3199403, y: 0.34698662}
+      - {x: -0.5616455, y: 1.6683803}
+      - {x: -2.6928418, y: 1.3744941}
+      - {x: -2.1853468, y: -0.032601323}
+      - {x: -1.6977147, y: 0.107259065}
+      - {x: -1.3964375, y: -1.628732}
+      - {x: 2.5928502, y: -1.2212657}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1204031886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204031880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61499414953c3734aaea4c7b754acabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 
 --- !u!1 &1218794268
 GameObject:
   m_ObjectHideFlags: 0
@@ -19179,8 +19255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  collide: {fileID: 0}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: 63c2cb183f54ca14499c25d46926619c, type: 3}
   hover: {fileID: 21300000, guid: 9e18552acbef1c545a06f11db573d1b6, type: 3}
@@ -20192,8 +20266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  collide: {fileID: 0}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: a8f3ce39c09d59a4bab90f6abc1738d9, type: 3}
   hover: {fileID: 21300000, guid: 04c049217877c8044905313abcd2494f, type: 3}
@@ -29341,8 +29413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93925778a09c8434bb242b9b21711fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  collide: {fileID: 0}
   mouse: {fileID: 1925961431}
   normal: {fileID: 21300000, guid: a7e8cf695c42dea42930de3c4a2978e4, type: 3}
   hover: {fileID: 21300000, guid: 9e414b9ce3fa90042b8cec9c0470fe13, type: 3}
