@@ -46,7 +46,7 @@ public class ZoomIn : MonoBehaviour
             mouse.screenActive = true;
             pencil.position = "screen";
 
-            Debug.Log(hit.collider);
+            //Debug.Log(hit.collider);
         }
     }
 }

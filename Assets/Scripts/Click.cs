@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Click : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class Click : MonoBehaviour
     public GameObject CurrentPage;
     public GameObject NextPage;
     public BrowserHistory history;
-    
+    public TextMeshProUGUI addressBar;
+
     private GameObject CurrentBg;
     private GameObject NextBg;
     private Scroll scroll;
@@ -32,7 +34,8 @@ public class Click : MonoBehaviour
             history.NewPage(NextPage);
             CurrentPage.SetActive(false);
             NextPage.SetActive(true);
-            
+            addressBar.text = NextPage.GetComponent<Website>().url;
+
             if (scroll != null)
             {
                 NextPage.transform.position = new Vector2(NextPage.transform.position.x, scroll.StartPosition);

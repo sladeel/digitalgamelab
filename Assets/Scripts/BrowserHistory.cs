@@ -23,6 +23,7 @@ public class BrowserHistory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(currentPage);
         if (currentPage.GetComponent<Scroll>() != null)
         {
             pagePoint = currentPage.GetComponent<Scroll>();
@@ -33,7 +34,7 @@ public class BrowserHistory : MonoBehaviour
         }
     }
 
-    public void NewPage(GameObject page)
+    public void NewPage(GameObject page) 
     {
         history.Push(currentPage);
         currentPage = page;

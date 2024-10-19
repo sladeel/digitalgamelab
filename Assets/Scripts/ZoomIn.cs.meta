@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: b2e87e7b0057b054ea9da41349f6b052
+labels:
+- Camera
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

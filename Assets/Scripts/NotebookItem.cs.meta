@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 762149a689c9a514588f762f2ba091ed
+labels:
+- Notebook
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

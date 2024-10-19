@@ -32,7 +32,7 @@ public class NoteHandler : MonoBehaviour
         clue.enabled = !clue.enabled;
         clueRender.enabled = !clueRender.enabled;
 
-        Debug.Log(clue.enabled);
+        //Debug.Log(clue.enabled);
     }
 
     // Update is called once per frame

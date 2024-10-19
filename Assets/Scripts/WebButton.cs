@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WebButton : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class WebButton : MonoBehaviour
     public Collider2D mouse;
     public BrowserHistory history;
     Collider2D button;
+    public TextMeshProUGUI addressBar;
+    public URLHandler url;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,11 @@ public class WebButton : MonoBehaviour
                     break;
                 case "refresh":
                     history.RefreshPage();
+                    break;
+                case "go":
+                    //Debug.Log(addressBar.text);
+                    url.ChangeSite(addressBar.text);
+                    Debug.Log(history.currentPage);
                     break;
             }
         }

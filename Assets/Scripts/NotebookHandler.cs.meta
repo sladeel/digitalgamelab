@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: dc81fff3560399841a4963f9bb8c4655
+labels:
+- Camera
+- Notebook
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

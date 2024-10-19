@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangePage : MonoBehaviour
+public class Website : MonoBehaviour
 {
-    public GameObject CurrentPage;
-    public GameObject NextPage;
-
+    public string url;
+    //public GameObject website;
+    public URLHandler handler;
+    
     // Start is called before the first frame update
     void Start()
     {
-        CurrentPage.SetActive(false);
-        NextPage.SetActive(true);
+        //website = GetComponent<GameObject>();
+        handler.AddSite(url, gameObject);
     }
 
     // Update is called once per frame

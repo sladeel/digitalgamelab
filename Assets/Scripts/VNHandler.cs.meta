@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: afd9a8c29c4b9624f8bdc7dc7a2351c0
+labels:
+- VisualNovel
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

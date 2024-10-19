@@ -41,7 +41,7 @@ public class ZoomOut : MonoBehaviour
             mouse.screenActive = true;
             pencil.position = "desk";
 
-            Debug.Log(hit.collider);
+            //Debug.Log(hit.collider);
         }
 
 

@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 7cc6bc127f9f2b14194a7600de558502
+labels:
+- Browser
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
