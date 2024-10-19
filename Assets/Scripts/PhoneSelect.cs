@@ -53,7 +53,7 @@ public class PhoneSelect : MonoBehaviour
             visualPhone.color = new Color(1, 0.38f, 1, 0f);
         }
 
-        if (hit.collider != null && click)
+        if (hit.collider != null && click && textBox.textReady)
         {
             leftCollide.enabled = !leftCollide.enabled;
             rightCollide.enabled = !rightCollide.enabled;

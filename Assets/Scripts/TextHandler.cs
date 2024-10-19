@@ -23,15 +23,15 @@ public class TextHandler : MonoBehaviour
     private string[] dialogueList;
     private int position;
     private int currentThread;
-    public bool readThread;
+    public bool textReady;
 
     // Start is called before the first frame update
     void Start()
     {
         position = 0;
         currentThread = -1;
-        readThread = false;
-        
+        textReady = false;
+
         if (canvas.enabled)
         {
             canvas.enabled = !canvas.enabled;
@@ -52,9 +52,20 @@ public class TextHandler : MonoBehaviour
 
     public void NewThread()
     {
-        currentThread++;
-        speakerList = speakerFiles[currentThread].text.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
-        dialogueList = dialogueFiles[currentThread].text.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
+        if (!textReady)
+        {
+            currentThread++;
+            speakerList = speakerFiles[currentThread].text.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
+            dialogueList = dialogueFiles[currentThread].text.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
+            position = 0;
+            speaker.text = speakerList[position];
+            dialogue.text = dialogueList[position];
+            textReady = true;
+        }
+        else
+        {
+            Debug.Log("Wuh woh, you fwucked up! You can't queue a new text conversation before the user reads this one!");
+        }
     }
 
     public void Advance()
@@ -77,7 +88,7 @@ public class TextHandler : MonoBehaviour
         }
         else
         {
-            readThread = true;
+            textReady = false;
             mouseActive.screenActive = true;
             canvas.enabled = !canvas.enabled;
             phone.position = "desk";
