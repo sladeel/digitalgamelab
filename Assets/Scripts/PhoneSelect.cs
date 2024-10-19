@@ -39,17 +39,17 @@ public class PhoneSelect : MonoBehaviour
             click = true;
         }
 
-        if (hit.collider != null && !canvas.isActiveAndEnabled)
+        if (hit.collider != null && !canvas.isActiveAndEnabled) //if hovered over and canvas is disabled
         {
             visualPhone.color = new Color(1, 0.38f, 1, 0.17f);
         }
-        else if (canvas.isActiveAndEnabled)
+        else if (canvas.isActiveAndEnabled) //if canvas is enabled
         {
             visualPhone.color = new Color(1, 0.38f, 1, 0);
         }
         else
         {
-            visualPhone.color = new Color(1, 0.38f, 1, 0.17f);
+            visualPhone.color = new Color(1, 0.38f, 1, 0f);
         }
 
         if (hit.collider != null && click)

@@ -13,6 +13,7 @@ public class TextHandler : MonoBehaviour
     public TextAsset[] speakerFiles;
     public TextAsset[] dialogueFiles;
     public RectTransform label;
+    public Canvas canvas;
     public float wait = 0.5f;
 
 
@@ -31,6 +32,10 @@ public class TextHandler : MonoBehaviour
         currentThread = -1;
         readThread = false;
         
+        if (canvas.enabled)
+        {
+            canvas.enabled = !canvas.enabled;
+        }
     }
 
     // Update is called once per frame
