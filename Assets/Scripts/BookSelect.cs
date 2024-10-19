@@ -13,11 +13,11 @@ public class BookSelect : MonoBehaviour
     bool click;
     public SpriteRenderer visualBook;
     public Collider2D collide;
-    public Collider2D mouse;
 
     public Collider2D leftCollide;
     public Collider2D rightCollide;
     public Collider2D screenCollide;
+    public Collider2D phoneCollide;
 
 
     // Start is called before the first frame update
@@ -60,6 +60,7 @@ public class BookSelect : MonoBehaviour
             leftCollide.enabled = !leftCollide.enabled;
             rightCollide.enabled = !rightCollide.enabled;
             screenCollide.enabled = !screenCollide.enabled;
+            phoneCollide.enabled = !phoneCollide.enabled;
             if (book.position != "book")
             {
                 book.position = "book";
@@ -75,7 +76,7 @@ public class BookSelect : MonoBehaviour
                 pencil.position = "desk";
             }
             
-            Debug.Log(hit.collider);
+            //Debug.Log(hit.collider);
         }
     }
 }
