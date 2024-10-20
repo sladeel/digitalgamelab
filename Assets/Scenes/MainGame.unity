@@ -18324,10 +18324,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1204031880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61499414953c3734aaea4c7b754acabb, type: 3}
+  m_Script: {fileID: 11500000, guid: beba300ccde823d47ad9d82362873f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
+  scene: ClosingCutscene
 --- !u!1 &1204309144
 GameObject:
   m_ObjectHideFlags: 0
