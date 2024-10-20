@@ -6,28 +6,58 @@ public class Scroll : MonoBehaviour
 {
     public float scrollSpeed = 0.5f;
     float height;
+    public GetHeight bodyContent;
     float startPosition;
-    float screenHeight = 6.440722f;
+    public float screenHeight = 6.478982f;
     float difference = 0;
+    public bool bugged;
+    public float offset;
+
+    /*public GameObject screenTop;
+    public GameObject screenBottom;
+
+    public GameObject top;
+    public GameObject bottom;*/
+
 
     // Start is called before the first frame update
     void Start()
     {
-        height = transform.GetChild(0).GetComponent<SpriteRenderer>().bounds.size.y;
+        
         startPosition = transform.position.y;
+        if (bugged)
+        {
+            startPosition = startPosition + offset;
+            //screenHeight = 0;
+        }
+        transform.position = new Vector2(transform.position.x, startPosition);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.mouseScrollDelta.y < 0 && transform.position.y < startPosition + height - (screenHeight + scrollSpeed))
+
+        
+        height = bodyContent.height;
+        if (Input.mouseScrollDelta.y < 0 && transform.position.y < startPosition + height - (screenHeight + scrollSpeed)) //difference < height)//
         {
             transform.position = new Vector2(transform.position.x, transform.position.y + scrollSpeed);
         }
-        else if (Input.mouseScrollDelta.y > 0 && transform.position.y > startPosition)
+        else if (Input.mouseScrollDelta.y > 0 && transform.position.y > startPosition) // difference > 0)
         {
             transform.position = new Vector2(transform.position.x, transform.position.y - scrollSpeed);
         }
+        /*if (Input.mouseScrollDelta.y < 0 && bottom.transform.position.y < screenBottom.transform.position.y)
+        {
+            transform.position = new Vector2(transform.position.x, transform.position.y + scrollSpeed);
+        }
+        else if (Input.mouseScrollDelta.y > 0 && top.transform.position.y > screenTop.transform.position.y)
+        {
+            transform.position = new Vector2(transform.position.x, transform.position.y - scrollSpeed);
+        }*/
+
+
+
         difference = transform.position.y - startPosition;
     }
 

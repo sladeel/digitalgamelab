@@ -51,7 +51,7 @@ public class URLHandler : MonoBehaviour
         foreach (string site in urlList)
         {
             //Debug.Log(site.CompareTo(url));
-            Debug.Log(site + " length: " + site.Length);
+            //Debug.Log(site + " length: " + site.Length);
 
             if (Equals(site, urlShort))
             {
