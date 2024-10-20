@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: e792ab6559dd83e4899a85b9ff41a8a1
+  - enabled: 1
+    path: Assets/Scenes/ClosingCutscene.unity
+    guid: 5d39026a013142841a4dcdd521b9aec5
   m_configObjects: {}

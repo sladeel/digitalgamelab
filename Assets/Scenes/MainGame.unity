@@ -728,7 +728,7 @@ MonoBehaviour:
   bodyContent: {fileID: 36042688}
   screenHeight: 6.478982
   bugged: 1
-  offset: -9
+  offset: 0
 --- !u!212 &36042685
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2877,6 +2877,8 @@ MonoBehaviour:
   itemName: digitalis
   wordCategory: Noun
   wordSubcategory: weapon
+  bugged: 1
+  offset: 2.5
 --- !u!212 &188809969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5694,6 +5696,8 @@ MonoBehaviour:
   itemName: botulinum
   wordCategory: Noun
   wordSubcategory: weapon
+  bugged: 1
+  offset: 2.5
 --- !u!212 &371759885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7977,6 +7981,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &449562047
 Rigidbody2D:
   serializedVersion: 4
@@ -8556,6 +8562,8 @@ MonoBehaviour:
   itemName: succinylcholine
   wordCategory: Noun
   wordSubcategory: weapon
+  bugged: 1
+  offset: 2.5
 --- !u!212 &492906903
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9597,6 +9605,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &534747785
 Rigidbody2D:
   serializedVersion: 4
@@ -10708,6 +10718,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &660160636
 Rigidbody2D:
   serializedVersion: 4
@@ -12032,6 +12044,8 @@ MonoBehaviour:
   itemName: sweetpea
   wordCategory: 
   wordSubcategory: 
+  bugged: 0
+  offset: 0
 --- !u!50 &762052874
 Rigidbody2D:
   serializedVersion: 4
@@ -12208,6 +12222,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &780658556
 Rigidbody2D:
   serializedVersion: 4
@@ -17466,6 +17482,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &1152513473
 Rigidbody2D:
   serializedVersion: 4
@@ -18658,6 +18676,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &1241544844
 Rigidbody2D:
   serializedVersion: 4
@@ -22290,6 +22310,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &1456633064
 Rigidbody2D:
   serializedVersion: 4
@@ -24306,6 +24328,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &1556110475
 Rigidbody2D:
   serializedVersion: 4
@@ -26527,6 +26551,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &1651078544
 Rigidbody2D:
   serializedVersion: 4
@@ -28417,6 +28443,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &1818949416
 Rigidbody2D:
   serializedVersion: 4
@@ -28873,6 +28901,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &1840936363
 Rigidbody2D:
   serializedVersion: 4
@@ -29407,6 +29437,8 @@ MonoBehaviour:
   itemName: work
   wordCategory: Noun
   wordSubcategory: verb
+  bugged: 0
+  offset: 0
 --- !u!61 &1860477179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30799,6 +30831,8 @@ MonoBehaviour:
   itemName: creditcard
   wordCategory: Noun
   wordSubcategory: 
+  bugged: 0
+  offset: 0
 --- !u!212 &1991873746
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31789,6 +31823,8 @@ MonoBehaviour:
   itemName: assassin
   wordCategory: Noun
   wordSubcategory: 
+  bugged: 0
+  offset: 0
 --- !u!50 &2072419368
 Rigidbody2D:
   serializedVersion: 4
@@ -32289,6 +32325,8 @@ MonoBehaviour:
   itemName: 
   wordCategory: 
   wordSubcategory: 
+  bugged: 1
+  offset: 0
 --- !u!50 &2090334575
 Rigidbody2D:
   serializedVersion: 4
@@ -33359,6 +33397,8 @@ MonoBehaviour:
   itemName: ricin
   wordCategory: Noun
   wordSubcategory: weapon
+  bugged: 1
+  offset: 2.5
 --- !u!212 &2139177478
 SpriteRenderer:
   m_ObjectHideFlags: 0

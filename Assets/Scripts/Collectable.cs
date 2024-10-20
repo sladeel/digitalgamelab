@@ -22,7 +22,9 @@ public class Collectable : MonoBehaviour
     Vector2 startPosition;
     float screenDifference;
     Vector2 returnVelocity;
-
+    
+    public bool bugged;
+    public float offset;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,11 @@ public class Collectable : MonoBehaviour
         maxMoveSpeed = mouseScript.maxMoveSpeed;
         smoothTime = mouseScript.smoothTime;
         startPosition = transform.position;
-        
+        if (bugged)
+        {
+            startPosition = new Vector2 (startPosition.x, startPosition.y - offset);
+        }
+        transform.position = startPosition;
     }
 
     // Update is called once per frame
