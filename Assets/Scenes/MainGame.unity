@@ -16054,6 +16054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 6
 --- !u!1 &637155475
 GameObject:
@@ -27012,6 +27013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 1
 --- !u!212 &1191240791
 SpriteRenderer:
@@ -27209,6 +27211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 3
 --- !u!212 &1202997300
 SpriteRenderer:
@@ -27363,6 +27366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 1204031885}
   page: 6
 --- !u!114 &1204031884
 MonoBehaviour:
@@ -27493,6 +27497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 3
 --- !u!212 &1204309147
 SpriteRenderer:
@@ -28911,6 +28916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 4
 --- !u!212 &1274634419
 SpriteRenderer:
@@ -36190,6 +36196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 4
 --- !u!212 &1563829781
 SpriteRenderer:
@@ -42380,6 +42387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 5
 --- !u!212 &1815039694
 SpriteRenderer:
@@ -47421,6 +47429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 2
 --- !u!212 &2075678706
 SpriteRenderer:
@@ -49350,6 +49359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 2
 --- !u!212 &2123462799
 SpriteRenderer:
@@ -49449,6 +49459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 1
 --- !u!212 &2126435447
 SpriteRenderer:
@@ -49874,6 +49885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookHandler: {fileID: 1678152910}
+  hitbox: {fileID: 0}
   page: 5
 --- !u!212 &2145112871
 SpriteRenderer:

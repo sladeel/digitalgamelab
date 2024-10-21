@@ -7,6 +7,7 @@ public class PageGraphics : MonoBehaviour
 
     Renderer graphicRenderer;
     public NotebookHandler notebookHandler;
+    public Collider2D hitbox;
     public int page;
 
     // Start is called before the first frame update
@@ -23,6 +24,10 @@ public class PageGraphics : MonoBehaviour
             if (graphicRenderer.enabled == false)
             {
                 graphicRenderer.enabled = !graphicRenderer.enabled;
+                if (hitbox != null)
+                {
+                    hitbox.enabled = !hitbox.enabled;
+                }
             }
             
         }
@@ -31,6 +36,10 @@ public class PageGraphics : MonoBehaviour
             if (graphicRenderer.enabled == true)
             {
                 graphicRenderer.enabled = !graphicRenderer.enabled;
+                if (hitbox != null)
+                {
+                    hitbox.enabled = !hitbox.enabled;
+                }
             }
         }
     }
