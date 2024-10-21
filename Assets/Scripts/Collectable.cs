@@ -49,7 +49,16 @@ public class Collectable : MonoBehaviour
         LayerMask mask = LayerMask.GetMask("Collectable");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1, mask);
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        screenDifference = GetComponentInParent<Scroll>().Difference;
+        
+        try
+        {
+            screenDifference = GetComponentInParent<Scroll>().Difference;
+        }
+        catch
+        {
+            screenDifference = 0;
+        }
+        
 
         /*if (hit.collider == text)
         {
