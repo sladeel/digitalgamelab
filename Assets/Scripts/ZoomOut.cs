@@ -11,6 +11,7 @@ public class ZoomOut : MonoBehaviour
     public PencilController pencil;
     public bool requireClick = false;
     bool click;
+    public Collider2D screen;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class ZoomOut : MonoBehaviour
             pad.position = "desk";
             mouse.screenActive = true;
             pencil.position = "desk";
+
 
             //Debug.Log(hit.collider);
         }

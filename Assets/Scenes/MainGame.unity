@@ -2403,6 +2403,8 @@ MonoBehaviour:
   mouse: {fileID: 1925961430}
   pencil: {fileID: 1898100764}
   requireClick: 1
+  leftCollide: {fileID: 1393062282}
+  rightCollide: {fileID: 1531698023}
 --- !u!50 &97336244
 Rigidbody2D:
   serializedVersion: 4
@@ -31698,6 +31700,7 @@ MonoBehaviour:
   mouse: {fileID: 1925961430}
   pencil: {fileID: 1898100764}
   requireClick: 1
+  screen: {fileID: 0}
 --- !u!1 &1393080698
 GameObject:
   m_ObjectHideFlags: 0
@@ -35136,6 +35139,7 @@ MonoBehaviour:
   mouse: {fileID: 1925961430}
   pencil: {fileID: 1898100764}
   requireClick: 1
+  screen: {fileID: 0}
 --- !u!50 &1531698022
 Rigidbody2D:
   serializedVersion: 4
@@ -45018,6 +45022,7 @@ MonoBehaviour:
   minY: -4.03
   maxY: 4.34
   screenActive: 0
+  grabbed: {fileID: 0}
 --- !u!61 &1925961431
 BoxCollider2D:
   m_ObjectHideFlags: 0

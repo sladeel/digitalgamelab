@@ -12,7 +12,10 @@ public class ZoomIn : MonoBehaviour
     public PencilController pencil;
     public bool requireClick = false;
     bool click;
-    
+
+    public Collider2D leftCollide;
+    public Collider2D rightCollide;
+
 
 
 
@@ -45,6 +48,13 @@ public class ZoomIn : MonoBehaviour
             pad.position = "screen";
             mouse.screenActive = true;
             pencil.position = "screen";
+
+            leftCollide.enabled = true;
+            rightCollide.enabled = true;
+            
+                
+
+
 
             //Debug.Log(hit.collider);
         }
