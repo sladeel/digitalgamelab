@@ -59,6 +59,7 @@ public class NoteHandler : MonoBehaviour
             if (notebookHandler.grabbed == null || notebookHandler.grabbed == gameObject)
             {
                 notebookHandler.grabbed = gameObject;
+                //Debug.Log("THINGS ARE OCCURING");
                 //difference = mousePosition - new Vector2 (transform.position.x, transform.position.y); //this is supposed to get the location of click relative to the pivot of the object
                 difference = new Vector2(0, 0); //this is what happens when the code above breaks.
 
@@ -81,12 +82,16 @@ public class NoteHandler : MonoBehaviour
         }
         else if (onPage == false)
         {
-            notebookHandler.grabbed = null;
+            if (notebookHandler.grabbed == gameObject)
+            {
+                notebookHandler.grabbed = null;
+            }
+            
             transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
         }
-        else
+        else if (notebookHandler.grabbed == gameObject)
         {
-            notebookHandler.grabbed = null;
+                notebookHandler.grabbed = null;
         }
 
         if (notebookHandler.page == page && parentClue.active)
