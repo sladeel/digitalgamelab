@@ -18,6 +18,8 @@ public class NotebookHandler : MonoBehaviour
     public int page;
     public int length;
 
+    public GameObject grabbed;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -55,11 +55,18 @@ public class NoteHandler : MonoBehaviour
         }
         if (/*(mouse.GetComponent<Collider2D>().IsTouching(clue) ||*/ (hit.collider == clue) && Input.GetMouseButton(0)) //check if clicking on collider. again. dw about it
         {
-            //difference = mousePosition - new Vector2 (transform.position.x, transform.position.y); //this is supposed to get the location of click relative to the pivot of the object
-            difference = new Vector2(0, 0); //this is what happens when the code above breaks.
+            
+            if (notebookHandler.grabbed == null || notebookHandler.grabbed == gameObject)
+            {
+                notebookHandler.grabbed = gameObject;
+                //difference = mousePosition - new Vector2 (transform.position.x, transform.position.y); //this is supposed to get the location of click relative to the pivot of the object
+                difference = new Vector2(0, 0); //this is what happens when the code above breaks.
 
-            //transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed); //this used to follow on a delay. it was bad. in retrospect i dont know why i included it
-            transform.position = mousePosition; //follows the mouse. could probably factor in that difference math if i tried
+                //transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed); //this used to follow on a delay. it was bad. in retrospect i dont know why i included it
+                transform.position = mousePosition; //follows the mouse. could probably factor in that difference math if i tried
+
+            }
+
 
 
             if (notebookCollider.IsTouching(clue) && !notNotebookCollider.IsTouching(clue)) //check that the notebook collider is touching and the not notebook collider isnt touching
@@ -74,7 +81,12 @@ public class NoteHandler : MonoBehaviour
         }
         else if (onPage == false)
         {
+            notebookHandler.grabbed = null;
             transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
+        }
+        else
+        {
+            notebookHandler.grabbed = null;
         }
 
         if (notebookHandler.page == page && parentClue.active)
