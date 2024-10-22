@@ -89,10 +89,10 @@ public class NoteHandler : MonoBehaviour
             
             transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
         }
-        else if (notebookHandler.grabbed == gameObject)
-        {
-                notebookHandler.grabbed = null;
-        }
+        else if (notebookHandler.grabbed == gameObject) //at the moment this and the on page false else statements are what deactivates 
+        {                                               //selection of a note. realistically the best way to handle this would be via
+            notebookHandler.grabbed = null;             //checking if the mouse was released also, but-
+        }                                               //actually fuck it i CAN implement that change
 
         if (notebookHandler.page == page && parentClue.active)
         {
