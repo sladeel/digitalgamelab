@@ -66,19 +66,30 @@ public class Collectable : MonoBehaviour
         }*/
         if (/*(*/mouse.GetComponent<Collider2D>().IsTouching(text) /*|| (hit.collider == text))*/ && Input.GetMouseButton(0))
         {
-            difference = mouse.transform.position - transform.position;
-
-            transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed);
-
-            if (notebookCollider.IsTouching(text))
+            if (mouseScript.grabbed == null || mouseScript.grabbed == gameObject)
             {
-                notebookScript.Collect(itemName);
-                found = true;
+                mouseScript.grabbed = gameObject;
+                difference = mouse.transform.position - transform.position;
+
+                transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed);
+
+                if (notebookCollider.IsTouching(text))
+                {
+                    notebookScript.Collect(itemName);
+                    found = true;
+                    mouseScript.grabbed = null;
+                }
             }
+
+            
         }
         else
         {
             transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
+            if (mouseScript.grabbed == gameObject)
+            {
+                mouseScript.grabbed = null;
+            }
         }
 
 

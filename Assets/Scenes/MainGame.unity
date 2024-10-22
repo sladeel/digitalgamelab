@@ -39496,7 +39496,7 @@ GameObject:
   - component: {fileID: 1659807176}
   - component: {fileID: 1659807175}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: Address Code
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39561,7 +39561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: www.homebase.net/index
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8ecde9fa32cc9d842a303cd6dc029155, type: 2}
   m_sharedMaterial: {fileID: 5196359353090193644, guid: 8ecde9fa32cc9d842a303cd6dc029155, type: 2}
@@ -39588,13 +39588,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -39624,7 +39624,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -9.541962, y: -6.5806828, z: -9.542023, w: -5.9225874}
+  m_margin: {x: -4.43927, y: -6.5806828, z: -9.542023, w: -5.9225874}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -42301,7 +42301,7 @@ GameObject:
   - component: {fileID: 1815460170}
   - component: {fileID: 1815460169}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Address Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46423,7 +46423,7 @@ GameObject:
   - component: {fileID: 1997428959}
   - component: {fileID: 1997428958}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Address User
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46495,13 +46495,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -46513,7 +46513,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 4
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1

@@ -14,8 +14,8 @@ public class FollowMouse : MonoBehaviour
     public bool screenActive;
 
     Vector2 currentVelocity;
-    
-    
+
+    public GameObject grabbed;
 
     // Start is called before the first frame update
     void Start()
