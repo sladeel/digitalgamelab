@@ -56,7 +56,10 @@ public class Scroll : MonoBehaviour
             transform.position = new Vector2(transform.position.x, transform.position.y - scrollSpeed);
         }*/
 
-
+        if (transform.position.y < startPosition)
+        {
+            transform.position = new Vector2(transform.position.x, startPosition);
+        }
 
         difference = transform.position.y - startPosition;
     }
