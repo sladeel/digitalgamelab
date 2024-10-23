@@ -25,7 +25,7 @@ public class NotebookItem : MonoBehaviour
     {
         if (notebook.collected[notebook.collected.Count - 1] == id)
         {
-            transform.localPosition = notebook.location;
+            //transform.localPosition = notebook.location;
             gameObject.SetActive(true);
             active = true;
         }
