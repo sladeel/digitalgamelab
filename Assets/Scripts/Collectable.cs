@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    public enum wordTypes
+    {
+        noun,
+        time,
+        verb
+    }
+    
+    public enum nounTypes
+    {
+        nan,
+        code,
+        location,
+        suspect,
+        weapon,
+        website
+    }
+    
+    
     bool found = false;
     Collider2D text;
     Collider2D notebookCollider;
@@ -13,8 +31,8 @@ public class Collectable : MonoBehaviour
     public GameObject notebook;
     Vector2 difference;
     public string itemName;
-    public string wordCategory;
-    public string wordSubcategory;
+    public wordTypes wordCategory;
+    public nounTypes wordSubcategory;
 
     float maxMoveSpeed;
     float smoothTime;
@@ -41,6 +59,11 @@ public class Collectable : MonoBehaviour
             startPosition = new Vector2 (startPosition.x, startPosition.y - offset);
         }
         transform.position = startPosition;
+
+        if (wordCategory != wordTypes.noun)
+        {
+            wordSubcategory = nounTypes.nan;
+        }
     }
 
     // Update is called once per frame
