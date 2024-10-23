@@ -28,7 +28,7 @@ public class Collectable : MonoBehaviour
     public GameObject mouse;
     private FollowMouse mouseScript;
     private Collector notebookScript;
-    public GameObject notebook;
+    public GameObject notepad;
     Vector2 difference;
     public string itemName;
     public wordTypes wordCategory;
@@ -40,7 +40,9 @@ public class Collectable : MonoBehaviour
     Vector2 startPosition;
     float screenDifference;
     Vector2 returnVelocity;
-    
+
+    Vector2 padVelocity;
+
     public bool bugged;
     public float offset;
 
@@ -48,9 +50,9 @@ public class Collectable : MonoBehaviour
     void Start()
     {
         text = GetComponent<Collider2D>();
-        notebookCollider = notebook.GetComponent<Collider2D>();
+        notebookCollider = notepad.GetComponent<Collider2D>();
         mouseScript = mouse.GetComponent<FollowMouse>();
-        notebookScript = notebook.GetComponent<Collector>();
+        notebookScript = notepad.GetComponent<Collector>();
         maxMoveSpeed = mouseScript.maxMoveSpeed;
         smoothTime = mouseScript.smoothTime;
         startPosition = transform.position;
@@ -94,7 +96,7 @@ public class Collectable : MonoBehaviour
                 mouseScript.grabbed = gameObject;
                 difference = mouse.transform.position - transform.position;
 
-                transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed);
+                transform.position = Vector2.SmoothDamp(transform.position, mousePosition - difference, ref currentVelocity, smoothTime, maxMoveSpeed);
 
                 if (notebookCollider.IsTouching(text))
                 {
@@ -104,7 +106,7 @@ public class Collectable : MonoBehaviour
                 }
             }
 
-            
+            notepad.transform.position = Vector2.SmoothDamp(notepad.transform.position, new Vector2(notepad.transform.position.x, notepad.transform.position.y + 1), ref padVelocity, smoothTime, maxMoveSpeed);
         }
         else
         {
