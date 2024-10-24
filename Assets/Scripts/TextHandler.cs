@@ -16,6 +16,7 @@ public class TextHandler : MonoBehaviour
     public Canvas canvas;
     public float wait = 0.5f;
     public PhoneController phone;
+    public AudioSource sound;
 
     char[] seperators = new char[] { '\n', '\r' };
 
@@ -24,6 +25,7 @@ public class TextHandler : MonoBehaviour
     private int position;
     private int currentThread;
     public bool textReady;
+    private int textsAvaliable;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +33,14 @@ public class TextHandler : MonoBehaviour
         position = 0;
         currentThread = -1;
         textReady = false;
+        textsAvaliable = 0;
 
         if (canvas.enabled)
         {
             canvas.enabled = !canvas.enabled;
         }
 
-        NewThread();
+        //NewThread();
     }
 
     // Update is called once per frame
@@ -61,10 +64,12 @@ public class TextHandler : MonoBehaviour
             speaker.text = speakerList[position];
             dialogue.text = dialogueList[position];
             textReady = true;
+            sound.Play();
         }
         else
         {
-            Debug.Log("Wuh woh, you fwucked up! You can't queue a new text conversation before the user reads this one!");
+            textsAvaliable++;
+            //Debug.Log("Wuh woh, you fwucked up! You can't queue a new text conversation before the user reads this one!");
         }
     }
 
@@ -92,6 +97,11 @@ public class TextHandler : MonoBehaviour
             mouseActive.screenActive = true;
             canvas.enabled = !canvas.enabled;
             phone.position = "desk";
+            if (textsAvaliable > 0)
+            {
+                textsAvaliable--;
+                NewThread();
+            }
         }
 
     }

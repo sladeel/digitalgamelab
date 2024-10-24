@@ -5,7 +5,6 @@ using UnityEngine;
 public class NoteHandler : MonoBehaviour
 {
     public int page;
-    Vector2 difference;
     Collider2D clue;
     Renderer clueRender;
     public bool onPage = false;
@@ -44,71 +43,44 @@ public class NoteHandler : MonoBehaviour
         
         startPosition = parentClue.transform.position;
 
-        if (notNotebookCollider.IsTouching(clue))
-        {
-            Debug.Log(clue + " is touching " + notNotebookCollider);
-        }
-
         if (hit.collider == clue && Input.GetMouseButton(0)) //check if clicking on collider
         {
-            //Debug.Log("Success! Hit " + hit.collider);
-        }
-        if (/*(mouse.GetComponent<Collider2D>().IsTouching(clue) ||*/ (hit.collider == clue) && Input.GetMouseButton(0)) //check if clicking on collider. again. dw about it
-        {
-            
-            if (notebookHandler.grabbed == null || notebookHandler.grabbed == gameObject)
+            if (notebookHandler.grabbed == null || notebookHandler.grabbed == gameObject) //check grabbed isn't set to another object
             {
-                notebookHandler.grabbed = gameObject;
-                //Debug.Log("THINGS ARE OCCURING");
-                //difference = mousePosition - new Vector2 (transform.position.x, transform.position.y); //this is supposed to get the location of click relative to the pivot of the object
-                difference = new Vector2(0, 0); //this is what happens when the code above breaks.
-
-                //transform.position = Vector2.SmoothDamp(transform.position, (mousePosition - difference), ref currentVelocity, smoothTime, maxMoveSpeed); //this used to follow on a delay. it was bad. in retrospect i dont know why i included it
-                transform.position = mousePosition; //follows the mouse. could probably factor in that difference math if i tried
-
-            }
-
-
-
-            if (notebookCollider.IsTouching(clue) && !notNotebookCollider.IsTouching(clue)) //check that the notebook collider is touching and the not notebook collider isnt touching
-            {
-                //Debug.Log("Success! " + clue + " is touching " + notebookCollider);
-                onPage = true;
-            }
-            else
-            {
-                onPage = false;
+                notebookHandler.grabbed = gameObject; //set grabbed to this object
             }
         }
-        else if (onPage == false)
+
+        if (notebookHandler.grabbed == gameObject) //check if this object is grabbed
         {
-            if (notebookHandler.grabbed == gameObject)
-            {
-                notebookHandler.grabbed = null;
-            }
-            
+            transform.position = mousePosition; //follow mouse while grabbed
+        }
+        
+        
+        if (notebookCollider.IsTouching(clue) && !notNotebookCollider.IsTouching(clue)) //check that the notebook collider is touching and the not notebook collider isnt touching
+        {
+            onPage = true;
+        } 
+        else
+        {
+            onPage = false;
+        }
+        
+        if (onPage == false && notebookHandler.grabbed != gameObject) //send any ungrabbed object not on page back to start location
+        {            
             transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
         }
-        else if (notebookHandler.grabbed == gameObject) //at the moment this and the on page false else statements are what deactivates 
-        {                                               //selection of a note. realistically the best way to handle this would be via
-            notebookHandler.grabbed = null;             //checking if the mouse was released also, but-
-        }                                               //actually fuck it i CAN implement that change
+        
 
-        if (notebookHandler.page == page && parentClue.active)
+        if (notebookHandler.page == page && parentClue.active) //sets clues visible only when on the correct page
         {
-            if (clue.enabled != true)
-            {
-                clue.enabled = !clue.enabled;
-                clueRender.enabled = !clueRender.enabled;
-            }
+            clue.enabled = true;
+            clueRender.enabled = true;
         }
         else
         {
-            if (clue.enabled == true)
-            {
-                clue.enabled = !clue.enabled;
-                clueRender.enabled = !clueRender.enabled;
-            }
+            clue.enabled = false;
+            clueRender.enabled = false;
         }
 
     }

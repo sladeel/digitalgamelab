@@ -55,5 +55,10 @@ public class NotebookHandler : MonoBehaviour
 
                 break;
         }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            grabbed = null;
+        }
     }
 }

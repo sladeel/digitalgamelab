@@ -7,6 +7,7 @@ public class Collector : MonoBehaviour
     public List<string> collected;
     public AudioSource sound;
     public Vector3 location;
+    public TextHandler phone;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class Collector : MonoBehaviour
         
         
         collected.Add(item);
-        BroadcastMessage("Display", location);
+        BroadcastMessage("Display");
 
 
         List<MonoBehaviour> monoList = new List<MonoBehaviour>();
@@ -38,8 +39,13 @@ public class Collector : MonoBehaviour
 
 
         sound.Play();
-        location = new Vector3(Random.Range(-0.09f, 0.09f), location.y - 0.425f, 5.736762f);
-        
+        location = new Vector3(Random.Range(-0.09f, 0.09f), location.y - 0.425f, 5.736762f); //passing location is no longer necessary
+                                                                                             //but functionality remains in case later builds
+        Debug.Log(collected.Count);                                                          //call for it
+        if (collected.Count % 10 == 0)
+        {
+            phone.NewThread();
+        }
         
     }
 }

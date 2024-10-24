@@ -9,6 +9,8 @@ public class NotebookItem : MonoBehaviour
     public bool active;
     Collider2D collide;
     public NotebookHandler notebookHandler;
+    GameObject clone;
+    bool isClone;
 
     // Start is called before the first frame update
     void Start()
@@ -16,41 +18,31 @@ public class NotebookItem : MonoBehaviour
         gameObject.SetActive(false);
         active = false;
         collide = GetComponent<Collider2D>();
+        isClone = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1);
+        /*RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1);
 
-        if (Input.GetMouseButtonDown(0) && hit == collide)
+        if (Input.GetMouseButtonDown(0) && hit == collide && !isClone)
         {
-            GameObject clone = Instantiate(gameObject);
-            
-            //everything beyond here is the code from notehandler.update
-            RaycastHit2D hitClone = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1);
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            if ((hit.collider == clone) && Input.GetMouseButton(0)) 
-            {
-
-                if (notebookHandler.grabbed == null || notebookHandler.grabbed == clone)
-                {
-                    notebookHandler.grabbed = clone;
-                    
-                    clone.transform.position = mousePosition; 
-
-                }
-
-            }
-            else 
-            {
-                Destroy(clone);
-            }
-                                                 
-
-
+            GameObject clone = Instantiate(gameObject, transform.parent);
+            notebookHandler.grabbed = clone;
+            clone.SetActive(true);
+            clone.GetComponent<NotebookItem>().IsClone = true;
         }
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (isClone && notebookHandler.grabbed == gameObject)
+        {
+            transform.position = mousePosition;
+        }
+        else if (isClone)
+        {
+            Destroy(gameObject);
+        }*/
     }
 
     public void Display()
@@ -63,4 +55,9 @@ public class NotebookItem : MonoBehaviour
         }
         
      }
+
+    public bool IsClone
+    {
+        set { isClone = value; }
+    }
 }
