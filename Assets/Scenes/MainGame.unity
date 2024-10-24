@@ -1707,7 +1707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: ' fastmail.com/inbox/0023683/messages/icHCV30pZr'
   handler: {fileID: 896121742}
 --- !u!114 &45416266
 MonoBehaviour:
@@ -3918,7 +3918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: ' fastmail.com/inbox/0023683/messages/0jXEh78BVn'
   handler: {fileID: 896121742}
 --- !u!114 &123338634
 MonoBehaviour:
@@ -4368,7 +4368,8 @@ MonoBehaviour:
   collected: []
   sound: {fileID: 131329770}
   location: {x: 0, y: 0, z: 0}
-  phone: {fileID: 0}
+  phone: {fileID: 1637038649}
+  notepadMove: 0.25
 --- !u!82 &131329770
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4856,7 +4857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: fastmail.com/inbox/0023683/messages/LMCTWYZK4o
   handler: {fileID: 896121742}
 --- !u!114 &141430832
 MonoBehaviour:
@@ -8835,7 +8836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: ' fastmail.com/inbox/0023683/messages/pUyUoQudeV'
   handler: {fileID: 896121742}
 --- !u!114 &331483775
 MonoBehaviour:
@@ -9171,7 +9172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: ' fastmail.com/inbox/0023683/messages/4saKDajOAM'
   handler: {fileID: 896121742}
 --- !u!114 &334902115
 MonoBehaviour:
@@ -10653,7 +10654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: fastmail.com/inbox/0023683/messages/xGS9sLVb2v
   handler: {fileID: 896121742}
 --- !u!114 &400963765
 MonoBehaviour:
@@ -15032,7 +15033,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d31b9504cd835a14bb5a8009b63760d4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16865,7 +16866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: fastmail.com/inbox/0023683/messages/zkHb8AkTCr
   handler: {fileID: 896121742}
 --- !u!114 &588655827
 MonoBehaviour:
@@ -24572,7 +24573,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2841187e6dbf46e489678882e25d07c1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -27712,7 +27713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: fastmail.com/inbox/0023683/messages/PA7m7oCUHg
   handler: {fileID: 896121742}
 --- !u!114 &1011450755
 MonoBehaviour:
@@ -28614,7 +28615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: fastmail.com/inbox/0023683/messages/HfitDw0Mzz
   handler: {fileID: 896121742}
 --- !u!114 &1026498121
 MonoBehaviour:
@@ -39403,7 +39404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: fastmail.com/inbox/0023683/messages/
+  url: fastmail.com/inbox/0023683/messages/IFPoG71TIs
   handler: {fileID: 896121742}
 --- !u!114 &1518047035
 MonoBehaviour:
@@ -42863,7 +42864,7 @@ MonoBehaviour:
   canvas: {fileID: 1637038652}
   wait: 0.5
   phone: {fileID: 1887044530}
-  sound: {fileID: 0}
+  sound: {fileID: 914921705}
   textReady: 0
 --- !u!114 &1637038650
 MonoBehaviour:
@@ -43498,7 +43499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: fastmail.com/inbox/0023683/messages/jhT6xnKHXG
   handler: {fileID: 896121742}
 --- !u!114 &1656306692
 MonoBehaviour:
@@ -51684,7 +51685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0396e7a5960e9341a961c2ba4ca6622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: daniel email url
+  url: fastmail.com/inbox/0023683/messages/7TFiMkdXXM
   handler: {fileID: 896121742}
 --- !u!114 &1988156426
 MonoBehaviour:

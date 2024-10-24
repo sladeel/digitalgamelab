@@ -33,6 +33,7 @@ public class Collectable : MonoBehaviour
     public string itemName;
     public wordTypes wordCategory;
     public nounTypes wordSubcategory;
+    float notepadMove;
 
     float maxMoveSpeed;
     float smoothTime;
@@ -66,6 +67,7 @@ public class Collectable : MonoBehaviour
         {
             wordSubcategory = nounTypes.nan;
         }
+        notepadMove = notebookScript.notepadMove;
     }
 
     // Update is called once per frame
@@ -106,7 +108,7 @@ public class Collectable : MonoBehaviour
                 }
             }
 
-            notepad.transform.position = Vector2.SmoothDamp(notepad.transform.position, new Vector2(notepad.transform.position.x, notepad.transform.position.y + 1), ref padVelocity, smoothTime, maxMoveSpeed);
+            notepad.transform.position = Vector2.SmoothDamp(notepad.transform.position, new Vector2(notepad.transform.position.x, notepad.transform.position.y + notepadMove), ref padVelocity, smoothTime, maxMoveSpeed);
         }
         else
         {

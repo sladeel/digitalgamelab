@@ -8,6 +8,7 @@ public class Collector : MonoBehaviour
     public AudioSource sound;
     public Vector3 location;
     public TextHandler phone;
+    public float notepadMove;
 
     // Start is called before the first frame update
     void Start()
