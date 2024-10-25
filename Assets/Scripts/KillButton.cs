@@ -7,6 +7,7 @@ public class KillButton : MonoBehaviour
 {
     public string scene;
     public List<GameObject> madlibsItems;
+    public MurderHandler murder;
     
     public MadlibsItem subject1Item;
     public MadlibsItem weapon2Item;
@@ -24,22 +25,32 @@ public class KillButton : MonoBehaviour
     public MadlibsItem verb7Item;
     public MadlibsItem noun7Item;
 
-    public string subject1;
-    public string weapon2;
-    public string location2;
-    public string verb3;
-    public string noun3;
-    public string verb4;
-    public string noun4;
-    public string code4;
-    public string location5;
-    public string time5;
-    public string verb6;
-    public string noun6a;
-    public string noun6b;
-    public string verb7;
-    public string noun7;
+    string subject1;
+    string weapon2;
+    string location2;
+    string verb3;
+    string noun3;
+    string verb4;
+    string noun4;
+    string code4;
+    string location5;
+    string time5;
+    string verb6;
+    string noun6a;
+    string noun6b;
+    string verb7;
+    string noun7;
 
+    public enum endingType
+        {
+        AliceKill,
+        ChelseaCaught,
+        ChelseaSuccess,
+        WrongCaught,
+        WrongSuccess,
+        FailCaught,
+        NetZero
+        }
     
     // Start is called before the first frame update
     void Start()
@@ -77,18 +88,56 @@ public class KillButton : MonoBehaviour
 
         if (hit.collider != null && Input.GetMouseButtonDown(0))
         {
-            
-            //SceneManager.LoadScene(scene);
+            murder.ending = KillCheck();
+
+            switch (subject1)
+            {
+                case "Chelsea Young":
+                    murder.victim = "Chelsea";
+                    murder.pronoun = "her";
+                    break;
+                case "Robin Baker":
+                    murder.victim = "Robin";
+                    murder.pronoun = "them";
+                    break;
+                case "Daniel Foster":
+                    murder.victim = "Daniel";
+                    murder.pronoun = "him";
+                    break;
+                case "Janice Johnson":
+                    murder.victim = "Janice";
+                    murder.pronoun = "her";
+                    break;
+                case "Chadwick Bones":
+                    murder.victim = "Chad";
+                    murder.pronoun = "him";
+                    break;
+            }
+            SceneManager.LoadScene(scene);
         }
     }
 
 
-    void KillCheck()
+    endingType KillCheck()
     {
+        if (subject1 == "Alice Van Dyke")
+        {
+            return endingType.AliceKill;
+        }
+        else if (subject1 == null)
+        {
+            return endingType.NetZero;
+        }
+
+        bool kill = false;
+        bool coverup = false;
+        
         bool cameras = (verb4 == "disable") && (noun4 == "cameras") && (code4 == "camera access code");
         bool gloves = (verb3 == "use") && (noun3 == "gloves");
         string method;
         string victim;
+
+        coverup = (cameras && gloves);
 
         switch (weapon2)
         {
@@ -131,7 +180,214 @@ public class KillButton : MonoBehaviour
             victim = "Robin Baker";
         }
 
+        if ((victim == "Chelsea Young") && (method == "knife") && (location2 == "kitchen") && (location5 == "stairwell") && (time5 == "10am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chelsea Young") && (method == "knife") && (location2 == "freeknife4u") && (location5 == "stairwell") && (time5 == "10am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chelsea Young") && (method == "hitman") && (location2 == "hitman4hire") && (location5 == "stairwell") && (time5 == "10am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chelsea Young") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "9am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chelsea Young") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chelsea Young") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "9am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chelsea Young") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Janice Johnson") && (method == "poison") && (location2 == "poisoninurcup") && (location5 == "*") && (time5 == "*"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Janice Johnson") && (method == "fall") && (location2 == "*") && (location5 == "roof") && (time5 == "430pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Janice Johnson") && (method == "fall") && (location2 == "*") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Janice Johnson") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "12pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Janice Johnson") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "12pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Janice Johnson") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "8pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Janice Johnson") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "8pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "knife") && (location2 == "kitchen") && (location5 == "Gym") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "knife") && (location2 == "freeknife4u") && (location5 == "Gym") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "knife") && (location2 == "kitchen") && (location5 == "Gym") && (time5 == "630pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "knife") && (location2 == "freeknife4u") && (location5 == "Gym") && (time5 == "630pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "hitman") && (location2 == "hitman4hire") && (location5 == "Gym") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "hitman") && (location2 == "hitman4hire") && (location5 == "Gym") && (time5 == "630pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "830am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "830am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Chadwick Bones") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Daniel Foster") && (method == "fall") && (location2 == "*") && (location5 == "roof") && (time5 == "230pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Daniel Foster") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "9am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Daniel Foster") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "9am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Daniel Foster") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Daniel Foster") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Robin Baker") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "915am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Robin Baker") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "915am"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Robin Baker") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "1230pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Robin Baker") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "1230pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Robin Baker") && (method == "drop") && (location2 == "roof") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
+        else if ((victim == "Robin Baker") && (method == "drop") && (location2 == "stairwell") && (location5 == "roof") && (time5 == "5pm"))
+        {
+            kill = true;
+        }
 
-        
+        if ((method == "hitman") && kill)
+        {
+            if ((verb7 == "send") && (noun7 == "plan"))
+            {
+                kill = true;
+            } 
+            else
+            {
+                kill = false;
+            }
+        }
+
+        if (coverup && method == "fall")
+        {
+            if ((verb7 == "confirm") && (noun7 == "death"))
+            {
+                coverup = true;
+            }
+            else
+            {
+                coverup = false;
+            }
+        }
+        else if (coverup && method == "knife")
+        {
+            if ((verb7 == "hide") && (noun7 == "knife"))
+            {
+                coverup = true;
+            }
+            else if ((verb7 == "hide") && (noun7 == "clothes"))
+            {
+                coverup = true;
+            }
+            else if ((verb7 == "burn") && (noun7 == "clothes"))
+            {
+                coverup = true;
+            }
+            else
+            {
+                coverup = false;
+            }
+        }
+
+        if ((victim == "Chelsea Young") && coverup && kill)
+        {
+            return endingType.ChelseaSuccess;
+        }
+        else if ((victim == "Chelsea Young") && kill)
+        {
+            return endingType.ChelseaCaught;
+        }
+        else if (kill && coverup)
+        {
+            return endingType.WrongSuccess;
+        }
+        else if (kill)
+        {
+            return endingType.WrongCaught;
+        }
+        else if (coverup)
+        {
+            return endingType.NetZero;
+        }
+        else
+        {
+            return endingType.FailCaught;
+        }
+
     }
 }
