@@ -99,23 +99,27 @@ public class KillKeywords : MonoBehaviour
             }            
         }
 
-        bool touch = false;
-        foreach (GameObject field in madlibsItems)
+        if (notebookHandler.page == 6)
         {
-            if ((field.GetComponent<MadlibsItem>() == stuckTo) && field.GetComponent<Collider2D>().IsTouching(keyword))
+            bool touch = false;
+            foreach (GameObject field in madlibsItems)
             {
-                touch = true;
-            } 
-        }
-        if (!touch)
-        {
-            if (stuckTo != null)
-            {
-                stuckTo.currentItem = null;
-                stuckTo = null;
+                if ((field.GetComponent<MadlibsItem>() == stuckTo) && field.GetComponent<Collider2D>().IsTouching(keyword))
+                {
+                    touch = true;
+                }
             }
-            
+            if (!touch)
+            {
+                if (stuckTo != null)
+                {
+                    stuckTo.currentItem = null;
+                    stuckTo = null;
+                }
+
+            }
         }
+        
 
 
 
