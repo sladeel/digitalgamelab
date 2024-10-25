@@ -68,6 +68,15 @@ public class PhoneSelect : MonoBehaviour
 
             //Debug.Log(hit.collider);
         }
+
+
+    if (phone.position == "desk")
+        {
+            leftCollide.enabled = true;
+            rightCollide.enabled = true;
+            screenCollide.enabled = true;
+            bookCollide.enabled = true;
+        }
     }
 }
 
