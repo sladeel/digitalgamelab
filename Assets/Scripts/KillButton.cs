@@ -85,41 +85,52 @@ public class KillButton : MonoBehaviour
 
     void KillCheck()
     {
-        bool cameras = (verb4 == "disable" && noun4 == "cameras" && code4 == "camera access code");
-        
-        switch (subject1)
+        bool cameras = (verb4 == "disable") && (noun4 == "cameras") && (code4 == "camera access code");
+        bool gloves = (verb3 == "use") && (noun3 == "gloves");
+        string method;
+        string victim;
+
+        switch (weapon2)
         {
-            case null:
-                //Failed Kill Success
+            case "knife":
+                method = "knife";
                 break;
-            case "Alice Van Dyke":
-                //Alice Kill
+            case "hitman":
+                method = "hitman";
                 break;
-            case "Robin Baker":
-                if ((weapon2 == "brick" && (location2 == "roof" || location2 == "stairwell"))|| weapon2 == "flowerpot" && location2 == "roof")
-                {
-                    if ((location5 == "roof") && (verb6 == "drop") && (noun6b == "Robin Baker") && (noun6a == weapon2))
-                    {
-                        if ((time5 == "915am") || (time5 == "1230pm") || (time5 == "5pm"))
-                        {
-                            //Robin kill success, check if coverup success
-                            if (cameras && (verb3 == "use") && (noun3 == "gloves"))
-                            {
-                                //robin kill success, coverup success
-                            }
-                            else
-                            {
-                                //robin kill success, caught
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    
-                }
+            case "brick":
+                method = "drop";
                 break;
+            case "flowerpot":
+                method = "drop";
+                break;
+            case "ricin":
+                method = "poison";
+                break;
+            case "digitalis":
+                method = "poison";
+                break;
+            case "botulinum":
+                method = "poison";
+                break;
+            case "succinylcholine":
+                method = "poison";
+                break;
+            case "peanut":
+                method = "poison";
+                break;
+            default:
+                method = "push";
+                break;
+
         }
+
+        victim = subject1;
+        if (victim == "robin username")
+        {
+            victim = "Robin Baker";
+        }
+
 
         
     }
