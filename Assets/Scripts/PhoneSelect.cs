@@ -55,18 +55,16 @@ public class PhoneSelect : MonoBehaviour
 
         if ((hit.collider != null) && click && textBox.textReady)
         {
-            leftCollide.enabled = !leftCollide.enabled;
-            rightCollide.enabled = !rightCollide.enabled;
-            screenCollide.enabled = !screenCollide.enabled;
-            bookCollide.enabled = !bookCollide.enabled;
+            leftCollide.enabled = false;
+            rightCollide.enabled = false;
+            screenCollide.enabled = false;
+            bookCollide.enabled = false;
 
             mouseActive.screenActive = false;
             phone.position = "phone";
 
-            if (!canvas.enabled)
-            {
-                canvas.enabled = !canvas.enabled;
-            }
+            canvas.enabled = true;
+            
 
             //Debug.Log(hit.collider);
         }

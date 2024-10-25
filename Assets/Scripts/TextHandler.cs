@@ -17,6 +17,10 @@ public class TextHandler : MonoBehaviour
     public float wait = 0.5f;
     public PhoneController phone;
     public AudioSource sound;
+    public Collider2D leftCollide;
+    public Collider2D rightCollide;
+    public Collider2D screenCollide;
+    public Collider2D bookCollide;
 
     char[] seperators = new char[] { '\n', '\r' };
 
@@ -34,12 +38,8 @@ public class TextHandler : MonoBehaviour
         currentThread = -1;
         textReady = false;
         textsAvaliable = 0;
-
-        if (canvas.enabled)
-        {
-            canvas.enabled = !canvas.enabled;
-        }
-
+        canvas.enabled = false;
+        
         //NewThread();
     }
 
@@ -95,13 +95,17 @@ public class TextHandler : MonoBehaviour
         {
             textReady = false;
             mouseActive.screenActive = true;
-            canvas.enabled = !canvas.enabled;
+            canvas.enabled = false;
             phone.position = "desk";
             if (textsAvaliable > 0)
             {
                 textsAvaliable--;
                 NewThread();
             }
+            leftCollide.enabled = true;
+            rightCollide.enabled = true;
+            screenCollide.enabled = true;
+            bookCollide.enabled = true;
         }
 
     }
