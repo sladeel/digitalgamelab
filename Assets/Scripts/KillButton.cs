@@ -85,6 +85,8 @@ public class KillButton : MonoBehaviour
 
     void KillCheck()
     {
+        bool cameras = (verb4 == "disable" && noun4 == "cameras" && code4 == "camera access code");
+        
         switch (subject1)
         {
             case null:
@@ -100,7 +102,15 @@ public class KillButton : MonoBehaviour
                     {
                         if ((time5 == "915am") || (time5 == "1230pm") || (time5 == "5pm"))
                         {
-
+                            //Robin kill success, check if coverup success
+                            if (cameras && (verb3 == "use") && (noun3 == "gloves"))
+                            {
+                                //robin kill success, coverup success
+                            }
+                            else
+                            {
+                                //robin kill success, caught
+                            }
                         }
                     }
                 }

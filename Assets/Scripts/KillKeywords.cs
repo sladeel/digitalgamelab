@@ -62,42 +62,45 @@ public class KillKeywords : MonoBehaviour
 
 
 
-
-        foreach (GameObject field in madlibsItems)
+        if (notebookHandler.position == "book")
         {
-            //Debug.Log(field);
-            Collider2D fieldCollider = field.GetComponent<Collider2D>();
-            //Debug.Log(fieldCollider);
-            MadlibsItem fieldScript = field.GetComponent<MadlibsItem>();
-            bool freeField = fieldScript.currentItem == null || fieldScript.currentItem == id;
-            /*if (fieldCollider.IsTouching(keyword))
+            foreach (GameObject field in madlibsItems)
             {
-                Debug.Log(gameObject + " touching " + field);
-            }*/
-            /*if (fieldCollider.IsTouching(keyword) &&  fieldScript.wordCategory == wordCategory)
-            {
-                Debug.Log(gameObject + " and " + field + "share a category!");
-            }*/
+                //Debug.Log(field);
+                Collider2D fieldCollider = field.GetComponent<Collider2D>();
+                //Debug.Log(fieldCollider);
+                MadlibsItem fieldScript = field.GetComponent<MadlibsItem>();
+                bool freeField = fieldScript.currentItem == null || fieldScript.currentItem == id;
+                /*if (fieldCollider.IsTouching(keyword))
+                {
+                    Debug.Log(gameObject + " touching " + field);
+                }*/
+                /*if (fieldCollider.IsTouching(keyword) &&  fieldScript.wordCategory == wordCategory)
+                {
+                    Debug.Log(gameObject + " and " + field + "share a category!");
+                }*/
 
-            if (fieldCollider.IsTouching(keyword) && (fieldScript.wordCategory == wordCategory) && freeField) 
-            {
-                //Debug.Log("touching and compatible!");
-                if (fieldScript.wordSubcategory != NotebookItem.nounTypes.nan && fieldScript.wordSubcategory == wordSubcategory)
+                if (fieldCollider.IsTouching(keyword) && (fieldScript.wordCategory == wordCategory) && freeField)
                 {
-                    //Debug.Log("matching subcategory!");
-                    fieldScript.currentItem = id;
-                    onPage = true;
-                    stuckTo = fieldScript;
+                    //Debug.Log("touching and compatible!");
+                    if (fieldScript.wordSubcategory != NotebookItem.nounTypes.nan && fieldScript.wordSubcategory == wordSubcategory)
+                    {
+                        //Debug.Log("matching subcategory!");
+                        fieldScript.currentItem = id;
+                        onPage = true;
+                        stuckTo = fieldScript;
+                    }
+                    else if (fieldScript.wordSubcategory == NotebookItem.nounTypes.nan && fieldScript.wordCategory == wordCategory)
+                    {
+                        //Debug.Log("irrelevant subcategory!");
+                        fieldScript.currentItem = id;
+                        onPage = true;
+                        stuckTo = fieldScript;
+                    }
                 }
-                else if (fieldScript.wordSubcategory == NotebookItem.nounTypes.nan && fieldScript.wordCategory == wordCategory)
-                {
-                    //Debug.Log("irrelevant subcategory!");
-                    fieldScript.currentItem = id;
-                    onPage = true;
-                    stuckTo = fieldScript;
-                }
-            }            
+            }
         }
+        
 
         if (notebookHandler.page == 6)
         {
