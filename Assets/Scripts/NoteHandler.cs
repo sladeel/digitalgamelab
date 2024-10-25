@@ -36,10 +36,12 @@ public class NoteHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (notebookHandler.position == "book")
+        { 
         LayerMask mask = LayerMask.GetMask("Clue");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1, mask);
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
+
         startPosition = parentClue.transform.position;
 
         if (hit.collider == clue && Input.GetMouseButton(0)) //check if clicking on collider
@@ -54,22 +56,22 @@ public class NoteHandler : MonoBehaviour
         {
             transform.position = mousePosition; //follow mouse while grabbed
         }
-        
-        
+
+
         if (notebookCollider.IsTouching(clue) && !notNotebookCollider.IsTouching(clue)) //check that the notebook collider is touching and the not notebook collider isnt touching
         {
             onPage = true;
-        } 
+        }
         else if (clue.enabled)
         {
             onPage = false;
         }
-        
+
         if (onPage == false && notebookHandler.grabbed != gameObject) //send any ungrabbed object not on page back to start location
-        {            
+        {
             transform.position = Vector2.SmoothDamp(transform.position, startPosition, ref returnVelocity, smoothTime, maxMoveSpeed);
         }
-        
+        }
 
         if (notebookHandler.page == page && parentClue.active) //sets clues visible only when on the correct page
         {
