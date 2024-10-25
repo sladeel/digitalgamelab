@@ -26159,7 +26159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordCategory: 0
-  wordSubcategory: 4
+  wordSubcategory: 0
   killManager: {fileID: 1204031886}
   currentItem: 
 --- !u!50 &352276161
