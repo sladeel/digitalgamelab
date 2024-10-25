@@ -716,16 +716,16 @@ MonoBehaviour:
   - {fileID: 4900000, guid: ddb5db92e615f184a8bdbe2f34407d80, type: 3}
   - {fileID: 4900000, guid: 93a76df177fa5fa4eab8ad3a4b9572c0, type: 3}
   - {fileID: 4900000, guid: 2132cc8af0920cd4a8d31e04dd7e7adf, type: 3}
-  - {fileID: 4900000, guid: 36e9deba4e92f874e904637c72208a2a, type: 3}
-  - {fileID: 4900000, guid: bbd88212f48111d44895e0e9bfdc5578, type: 3}
+  - {fileID: 4900000, guid: 29a7f515978925a419e3d51c9bc83205, type: 3}
+  - {fileID: 4900000, guid: 0996b4546bdbed14c83e9690fbb3adde, type: 3}
   dialogueFiles:
   - {fileID: 4900000, guid: fb00f0f013af4824e84fc5cac3f9b06d, type: 3}
   - {fileID: 4900000, guid: 2b1f4630f8416ab4d86bb08ada28374d, type: 3}
   - {fileID: 4900000, guid: fcad97783dbb6554bacd9ae5df735d8c, type: 3}
   - {fileID: 4900000, guid: b895afaabc667da4a8806824e1398911, type: 3}
   - {fileID: 4900000, guid: 7b6be19d6e3fb2043909193342af63b6, type: 3}
-  - {fileID: 4900000, guid: 29a7f515978925a419e3d51c9bc83205, type: 3}
-  - {fileID: 4900000, guid: 0996b4546bdbed14c83e9690fbb3adde, type: 3}
+  - {fileID: 4900000, guid: 36e9deba4e92f874e904637c72208a2a, type: 3}
+  - {fileID: 4900000, guid: bbd88212f48111d44895e0e9bfdc5578, type: 3}
   expressionFiles:
   - {fileID: 4900000, guid: 007c8989dacef0a4c899ee8acceb41a4, type: 3}
   - {fileID: 4900000, guid: 3a45cbfbc6a79b84a87941120fb1dad7, type: 3}
