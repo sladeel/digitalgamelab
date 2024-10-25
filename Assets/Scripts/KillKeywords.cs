@@ -16,6 +16,7 @@ public class KillKeywords : MonoBehaviour
     public NotebookHandler notebookHandler;
     bool onPage;
     public string id;
+    MadlibsItem stuckTo;
 
     public float maxMoveSpeed = 10;
     public float smoothTime = 0.3f;
@@ -34,6 +35,7 @@ public class KillKeywords : MonoBehaviour
         keywordRender.enabled = false;
         onPage = false;
         id = parentNote.GetComponent<NotebookItem>().id;
+        stuckTo = null;
     }
 
     // Update is called once per frame
@@ -63,26 +65,63 @@ public class KillKeywords : MonoBehaviour
 
         foreach (GameObject field in madlibsItems)
         {
+            //Debug.Log(field);
             Collider2D fieldCollider = field.GetComponent<Collider2D>();
+            //Debug.Log(fieldCollider);
             MadlibsItem fieldScript = field.GetComponent<MadlibsItem>();
-            bool freefield = (fieldScript.currentItem == null || fieldScript.currentItem == id);
-            if (fieldCollider.IsTouching(keyword) && fieldScript.wordCategory == wordCategory && freefield) 
+            bool freeField = fieldScript.currentItem == null || fieldScript.currentItem == id;
+            /*if (fieldCollider.IsTouching(keyword))
             {
+                Debug.Log(gameObject + " touching " + field);
+            }*/
+            /*if (fieldCollider.IsTouching(keyword) &&  fieldScript.wordCategory == wordCategory)
+            {
+                Debug.Log(gameObject + " and " + field + "share a category!");
+            }*/
+
+            if (fieldCollider.IsTouching(keyword) && (fieldScript.wordCategory == wordCategory) && freeField) 
+            {
+                //Debug.Log("touching and compatible!");
                 if (fieldScript.wordSubcategory != NotebookItem.nounTypes.nan && fieldScript.wordSubcategory == wordSubcategory)
                 {
+                    //Debug.Log("matching subcategory!");
                     fieldScript.currentItem = id;
                     onPage = true;
+                    stuckTo = fieldScript;
                 }
-                else if (fieldScript.wordSubcategory == NotebookItem.nounTypes.nan)
+                else if (fieldScript.wordSubcategory == NotebookItem.nounTypes.nan && fieldScript.wordCategory == wordCategory)
                 {
+                    //Debug.Log("irrelevant subcategory!");
                     fieldScript.currentItem = id;
                     onPage = true;
+                    stuckTo = fieldScript;
                 }
-            }
-            else
+            }            
+        }
+
+        bool touch = false;
+        foreach (GameObject field in madlibsItems)
+        {
+            if ((field.GetComponent<MadlibsItem>() == stuckTo) && field.GetComponent<Collider2D>().IsTouching(keyword))
             {
-                onPage = false;
+                touch = true;
+            } 
+        }
+        if (!touch)
+        {
+            if (stuckTo != null)
+            {
+                stuckTo.currentItem = null;
+                stuckTo = null;
             }
+            
+        }
+
+
+
+        if (stuckTo == null)
+        {
+            onPage = false;
         }
 
         

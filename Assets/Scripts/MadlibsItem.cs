@@ -13,6 +13,7 @@ public class MadlibsItem : MonoBehaviour
     void Start()
     {
         killManager.madlibsItems.Add(gameObject);
+        currentItem = null;
     }
 
     // Update is called once per frame

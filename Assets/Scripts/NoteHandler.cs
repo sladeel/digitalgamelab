@@ -60,7 +60,7 @@ public class NoteHandler : MonoBehaviour
         {
             onPage = true;
         } 
-        else
+        else if (clue.enabled)
         {
             onPage = false;
         }
