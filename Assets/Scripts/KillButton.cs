@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class KillButton : MonoBehaviour
 {
     public string scene;
+    public List<GameObject> madlibsItems;
+    
     
     // Start is called before the first frame update
     void Start()

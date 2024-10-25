@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class NotebookItem : MonoBehaviour
 {
+    public enum wordTypes
+    {
+        noun,
+        time,
+        verb
+    }
+
+    public enum nounTypes
+    {
+        nan,
+        code,
+        location,
+        suspect,
+        weapon,
+        website
+    }
+
     public string id;
     public Collector notebook;
     public bool active;
@@ -11,6 +28,9 @@ public class NotebookItem : MonoBehaviour
     public NotebookHandler notebookHandler;
     GameObject clone;
     bool isClone;
+
+    public wordTypes wordCategory;
+    public nounTypes wordSubcategory;
 
     // Start is called before the first frame update
     void Start()
