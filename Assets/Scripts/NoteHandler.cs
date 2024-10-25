@@ -18,7 +18,6 @@ public class NoteHandler : MonoBehaviour
     public float smoothTime = 0.3f;
     Vector2 currentVelocity;
     Vector2 startPosition;
-    float screenDifference;
     Vector2 returnVelocity;
 
     // Start is called before the first frame update
@@ -28,8 +27,8 @@ public class NoteHandler : MonoBehaviour
         clueRender = GetComponent<Renderer>();
         notebookCollider = notebook.GetComponent<Collider2D>();
 
-        clue.enabled = !clue.enabled;
-        clueRender.enabled = !clueRender.enabled;
+        clue.enabled = false;
+        clueRender.enabled = false;
 
         //Debug.Log(clue.enabled);
     }
@@ -68,7 +67,7 @@ public class NoteHandler : MonoBehaviour
         
         if (onPage == false && notebookHandler.grabbed != gameObject) //send any ungrabbed object not on page back to start location
         {            
-            transform.position = Vector2.SmoothDamp(transform.position, (new Vector2(startPosition.x, startPosition.y + screenDifference)), ref returnVelocity, smoothTime, maxMoveSpeed);
+            transform.position = Vector2.SmoothDamp(transform.position, startPosition, ref returnVelocity, smoothTime, maxMoveSpeed);
         }
         
 
