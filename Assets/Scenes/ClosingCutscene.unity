@@ -730,12 +730,12 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 007c8989dacef0a4c899ee8acceb41a4, type: 3}
   - {fileID: 4900000, guid: 3a45cbfbc6a79b84a87941120fb1dad7, type: 3}
   - {fileID: 4900000, guid: 93ae3c936db02ae4685f8d5f2ef2e32c, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4900000, guid: ffc5616d3c56ded408c29ce52e8af8f9, type: 3}
+  - {fileID: 4900000, guid: 74e2168e2074c2a4aa035babe4fd582c, type: 3}
   - {fileID: 4900000, guid: 0d52ed0e9e317f44dafbc399fb9cc9d1, type: 3}
   - {fileID: 4900000, guid: 73dde42ea2a339346bebc12e2dbf36ed, type: 3}
   label: {fileID: 493261870}
-  scene: mainmenu
+  scene: Menu
   wait: 0.5
   tempFile: 
 --- !u!1 &1582889295
